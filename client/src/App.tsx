@@ -6,6 +6,7 @@ import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 import EscapingAirtable from "./pages/blog/EscapingAirtable";
+import WhenBubbleBurst from "./pages/blog/WhenBubbleBurst";
 
 
 function Router() {
@@ -13,6 +14,7 @@ function Router() {
     <Switch>
       <Route path={"/"} component={Home} />
       <Route path={"/blog/escaping-airtable"} component={EscapingAirtable} />
+      <Route path={"/blog/when-bubble-burst"} component={WhenBubbleBurst} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />

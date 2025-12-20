@@ -302,13 +302,15 @@ export default function Home() {
               readTime="8 min read"
             />
           </Link>
-          <BlogCard 
-            title="When the Bubble Burst: Handling Viral Load"
-            excerpt="A post-mortem of a Bubble app that crashed at 5k concurrent users, and the Node.js architecture that replaced it to handle 100k."
-            image="/images/blog-bubble.png"
-            date="Sep 28, 2025"
-            readTime="12 min read"
-          />
+          <Link href="/blog/when-bubble-burst" className="block h-full">
+            <BlogCard 
+              title="When the Bubble Burst: Handling Viral Load"
+              excerpt="A post-mortem of a Bubble app that crashed at 5k concurrent users, and the Node.js architecture that replaced it to handle 100k."
+              image="/images/blog-bubble.png"
+              date="Sep 28, 2025"
+              readTime="12 min read"
+            />
+          </Link>
           <BlogCard 
             title="The API Spaghetti Incident"
             excerpt="Untangling a web of 40+ Zapier zips into a clean, type-safe backend service. Reducing latency by 400% and costs by 90%."
