@@ -1,5 +1,6 @@
 import { BlogCard, FAQItem, FeatureCard, Headline, OrganicButton, PricingCard, Section, Subheadline } from "@/components/LandingComponents";
 import { Code, Database, Globe, Layers, Lock, Rocket, Server, ShieldCheck, Terminal, Zap } from "lucide-react";
+import { Link } from "wouter";
 
 export default function Home() {
   return (
@@ -292,13 +293,15 @@ export default function Home() {
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
-          <BlogCard 
-            title="Escaping the Airtable Trap: Migrating 50k Records"
-            excerpt="How we moved a complex relational schema from Airtable to PostgreSQL without losing a single record or breaking relationships."
-            image="/images/blog-airtable.png"
-            date="Oct 12, 2025"
-            readTime="8 min read"
-          />
+          <Link href="/blog/escaping-airtable" className="block h-full">
+            <BlogCard 
+              title="Escaping the Airtable Trap: Migrating 50k Records"
+              excerpt="How we moved a complex relational schema from Airtable to PostgreSQL without losing a single record or breaking relationships."
+              image="/images/blog-airtable.png"
+              date="Oct 12, 2025"
+              readTime="8 min read"
+            />
+          </Link>
           <BlogCard 
             title="When the Bubble Burst: Handling Viral Load"
             excerpt="A post-mortem of a Bubble app that crashed at 5k concurrent users, and the Node.js architecture that replaced it to handle 100k."
