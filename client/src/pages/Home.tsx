@@ -1,5 +1,5 @@
 import { BlogCard, FAQItem, FeatureCard, Headline, OrganicButton, PricingCard, Section, Subheadline } from "@/components/LandingComponents";
-import { Code, Database, Globe, Layers, Lock, Rocket, Server, ShieldCheck, Terminal, Zap } from "lucide-react";
+import { ArrowRight, Code, Database, Globe, Layers, Lock, Rocket, Server, ShieldCheck, Terminal, Zap } from "lucide-react";
 import { Link } from "wouter";
 
 export default function Home() {
@@ -35,8 +35,17 @@ export default function Home() {
         
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="relative z-10">
-            <div className="inline-block bg-primary/10 text-primary px-4 py-1.5 rounded-full font-sans font-medium text-sm mb-8">
-              For No-Code Refugees
+            <Link href="/unblock">
+              <a className="inline-flex items-center gap-2 bg-chart-2/10 text-chart-2 px-4 py-1.5 rounded-full font-sans font-bold text-sm mb-6 hover:bg-chart-2/20 transition-colors border border-chart-2/20 cursor-pointer group">
+                <Zap className="w-3 h-3 fill-current" />
+                <span>Stuck right now? Get unblocked</span>
+                <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
+              </a>
+            </Link>
+            <div className="block mb-8">
+              <div className="inline-block bg-primary/10 text-primary px-4 py-1.5 rounded-full font-sans font-medium text-sm">
+                For No-Code Refugees
+              </div>
             </div>
             <Headline>
               Stop Building Toys.<br />

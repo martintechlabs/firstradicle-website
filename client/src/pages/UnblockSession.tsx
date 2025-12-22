@@ -33,7 +33,7 @@ export default function UnblockSession() {
           <div className="max-w-4xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-chart-2/10 text-chart-2 text-xs font-bold tracking-wider uppercase mb-6 border border-chart-2/20">
               <Zap className="w-3 h-3" />
-              New Service
+              Priority Access
             </div>
             <Headline className="text-5xl md:text-7xl mb-8">
               The Last 20% is the <br/>
@@ -45,7 +45,7 @@ export default function UnblockSession() {
             </Subheadline>
             <div className="flex flex-col sm:flex-row gap-4">
               <OrganicButton className="h-14 px-8 text-lg">
-                Book Unblock Session ($99)
+                Book Architect Review ($249)
               </OrganicButton>
               <p className="text-sm text-muted-foreground self-center sm:ml-4">
                 100% Money-back guarantee if we can't help.
@@ -104,7 +104,7 @@ export default function UnblockSession() {
         {/* The Solution */}
         <Section>
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <Headline>Phone-a-Friend for Builders</Headline>
+            <Headline>Senior Architect Review</Headline>
             <Subheadline>
               Upload your code. Describe the block. Get matched with an expert who's hit that wall before.
             </Subheadline>
@@ -115,9 +115,9 @@ export default function UnblockSession() {
               <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-6 text-primary">
                 <Code2 className="w-6 h-6" />
               </div>
-              <h3 className="text-xl font-serif font-bold mb-3">Expert Review</h3>
+              <h3 className="text-xl font-serif font-bold mb-3">Deep Architecture Audit</h3>
               <p className="text-muted-foreground">
-                We don't just guess. We look at your actual repo. We trace the bug. We find the missing config.
+                We don't just patch bugs. We analyze your codebase to find the structural flaws causing them.
               </p>
             </div>
             <div className="organic-card p-8 bg-white hover:-translate-y-1 transition-transform duration-300">
@@ -149,11 +149,11 @@ export default function UnblockSession() {
             <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 md:p-12 border border-white/20 mb-12">
               <div className="flex flex-col md:flex-row items-center justify-between gap-8">
                 <div className="text-left">
-                  <div className="text-2xl font-bold mb-2">Unblock Session</div>
-                  <div className="text-primary-foreground/80">One-time expert rescue session</div>
+                  <div className="text-2xl font-bold mb-2">Architect Review</div>
+                  <div className="text-primary-foreground/80">Strategic intervention & code audit</div>
                 </div>
                 <div className="text-5xl font-bold font-sans">
-                  $99
+                  $249
                 </div>
               </div>
               <hr className="border-white/20 my-8" />
@@ -177,7 +177,7 @@ export default function UnblockSession() {
               </div>
             </div>
             <button className="bg-white text-primary hover:bg-chart-2 hover:text-white transition-colors px-10 py-5 rounded-full font-bold text-xl inline-flex items-center gap-3 shadow-lg hover:shadow-xl transform hover:-translate-y-1 duration-300">
-              Book Your Session Now <ArrowRight className="w-6 h-6" />
+              Book Priority Review <ArrowRight className="w-6 h-6" />
             </button>
             <p className="mt-6 text-primary-foreground/60 text-sm">
               Limited spots available per week.
