@@ -31,7 +31,7 @@ export default function Home() {
               Start Cultivating <span className="text-primary italic">Software.</span>
             </Headline>
             <Subheadline>
-              We turn your struggling Bubble app into a scalable, production-ready React & Node.js ecosystem in 6 weeks. Guaranteed.
+              We turn struggling no-code projects into scalable, production-ready apps in 6 weeks. Guaranteed.
             </Subheadline>
             <div className="flex flex-col sm:flex-row gap-4 mt-8">
               <Link href="/unblock">
