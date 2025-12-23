@@ -135,7 +135,7 @@ export default function Home() {
         <div className="grid md:grid-cols-3 gap-8">
           <FeatureCard 
             title="Production Grade"
-            description="Built on modern stacks like React, Python, or Next.js. The same tech used by Uber, Airbnb, and Netflix. Ready for millions of users."
+            description="Built on modern stacks like React, Python, or Next.js. The same tech used by Uber, Airbnb, and Netflix. Built to grow seamlessly with your business."
             icon={Server}
           />
           <FeatureCard 
