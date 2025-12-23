@@ -310,7 +310,7 @@ export default function Home() {
             ctaText="Start Application"
             features={[
               "Full Stack Migration",
-              "Database Migration",
+              "Data Migration",
               "Auth & Payments Setup",
               "6-Week Delivery Guarantee",
               "Source Code Ownership",
@@ -323,7 +323,7 @@ export default function Home() {
             ctaText="Contact Us"
             features={[
               "Ongoing Feature Dev",
-              "Server Maintenance",
+              
               "Security Updates",
               "Priority Support",
               "Monthly Strategy Call",
