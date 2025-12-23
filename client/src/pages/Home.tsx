@@ -277,7 +277,7 @@ export default function Home() {
             <BlogCard 
               title="The API Spaghetti Incident"
               excerpt="Untangling a web of 40+ Zapier zips into a clean, type-safe backend service. Reducing latency by 400% and costs by 90%."
-              image="/images/blog-api.png"
+              image="/images/blog-zapier.png"
               date="Sep 15, 2025"
               readTime="6 min read"
             />
