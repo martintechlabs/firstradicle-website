@@ -83,6 +83,8 @@ export default function Home() {
             <span className="text-xl md:text-2xl font-bold font-serif text-primary">Webflow</span>
             <span className="text-xl md:text-2xl font-bold font-serif text-primary">Airtable</span>
             <span className="text-xl md:text-2xl font-bold font-serif text-primary">Zapier</span>
+            <span className="text-xl md:text-2xl font-bold font-serif text-primary">Replit</span>
+            <span className="text-xl md:text-2xl font-bold font-serif text-primary">Lovable</span>
           </div>
         </div>
       </div>
