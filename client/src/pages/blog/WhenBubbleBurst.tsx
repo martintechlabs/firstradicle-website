@@ -1,32 +1,21 @@
-import { Headline, OrganicButton, Section, Subheadline } from "@/components/LandingComponents";
-import { ArrowLeft, Check, Code, Database, FileJson, Layers, Server, Zap } from "lucide-react";
+import { OrganicButton } from "@/components/LandingComponents";
+import { Layout } from "@/components/Layout";
+import { ArrowLeft, Zap } from "lucide-react";
 import { Link } from "wouter";
 
 export default function WhenBubbleBurst() {
   return (
-    <div className="min-h-screen bg-background text-foreground font-sans selection:bg-primary/20">
-      {/* Navigation */}
-      <nav className="py-6 sticky top-0 bg-background/80 backdrop-blur-md z-50 border-b border-border">
-        <div className="container flex justify-between items-center">
-          <Link href="/">
-            <div className="flex items-center gap-3 cursor-pointer hover:opacity-80 transition-opacity">
-              <img src="/images/logo.png" alt="First Radicle Logo" className="h-10 w-auto" />
-              <div className="font-serif font-bold text-2xl tracking-tight text-primary">
-                First Radicle
-              </div>
-            </div>
-          </Link>
-          <Link href="/">
-            <OrganicButton variant="secondary" className="text-sm py-2 px-4">
-              <ArrowLeft className="w-4 h-4 mr-2" /> Back to Home
-            </OrganicButton>
-          </Link>
-        </div>
-      </nav>
-
+    <Layout>
       {/* Article Header */}
       <header className="pt-20 pb-12 bg-secondary/30">
         <div className="container max-w-4xl mx-auto">
+          <div className="mb-8">
+            <Link href="/">
+              <OrganicButton variant="secondary" className="text-sm py-2 px-4 inline-flex items-center">
+                <ArrowLeft className="w-4 h-4 mr-2" /> Back to Home
+              </OrganicButton>
+            </Link>
+          </div>
           <div className="flex items-center gap-3 text-sm font-sans font-medium text-muted-foreground mb-6 uppercase tracking-wider">
             <span className="text-primary">Architecture</span>
             <span className="w-1 h-1 rounded-full bg-primary/30" />
@@ -189,19 +178,6 @@ new Worker('checkout-queue', async job => {
 
         </div>
       </article>
-
-      {/* Footer */}
-      <footer className="bg-primary text-primary-foreground py-16">
-        <div className="container">
-          <div className="flex flex-col md:flex-row justify-between items-center text-sm text-primary-foreground/50 font-sans">
-            <div className="flex items-center gap-3 mb-4 md:mb-0">
-              <img src="/images/logo.png" alt="First Radicle Logo" className="h-6 w-auto brightness-0 invert" />
-              <span className="font-serif font-bold text-lg tracking-tight text-white">First Radicle</span>
-            </div>
-            <div>&copy; 2025 First Radicle. All rights reserved.</div>
-          </div>
-        </div>
-      </footer>
-    </div>
+    </Layout>
   );
 }
