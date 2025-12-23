@@ -36,7 +36,7 @@ export default function ApiSpaghetti() {
       <div className="container max-w-5xl mx-auto -mt-12 mb-20 relative z-10">
         <div className="aspect-video rounded-2xl overflow-hidden shadow-2xl border border-white/20">
           <img 
-            src="/images/blog-api.png" 
+            src="/images/blog-zapier.png" 
             alt="API Integration Network Illustration" 
             className="w-full h-full object-cover"
           />
