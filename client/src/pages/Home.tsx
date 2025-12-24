@@ -2,6 +2,7 @@ import { BlogCard, FAQItem, FeatureCard, Headline, OrganicButton, PricingCard, S
 import { Layout } from "@/components/Layout";
 import { ArrowRight, Code, Database, Lock, Rocket, Server, ShieldCheck, Zap } from "lucide-react";
 import { Link } from "wouter";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 export default function Home() {
   return (
@@ -210,33 +211,67 @@ export default function Home() {
       {/* Social Proof */}
       <Section className="bg-primary text-primary-foreground">
         <Headline className="text-center text-primary-foreground mb-16">Founder Stories</Headline>
-        <div className="grid md:grid-cols-2 gap-8">
-          <div className="bg-white/10 backdrop-blur-sm p-10 rounded-2xl relative border border-white/10">
-            <div className="text-6xl font-serif absolute top-6 left-6 opacity-20">"</div>
-            <p className="text-lg font-medium relative z-10 mb-8 leading-relaxed">
-              "We hit 5,000 users on Bubble and the app just stopped working. First Radicle migrated us in 5 weeks. We just raised our Seed round on the new tech stack."
-            </p>
-            <div className="flex items-center gap-4">
-              <img src="/images/avatar-sarah.jpg" alt="Sarah Jenkins" className="w-12 h-12 rounded-full object-cover border-2 border-white/20" />
-              <div>
-                <div className="font-serif font-bold text-lg">Sarah Jenkins</div>
-                <div className="text-sm opacity-80">Founder, FinFlow</div>
-              </div>
-            </div>
-          </div>
-          <div className="bg-white/10 backdrop-blur-sm p-10 rounded-2xl relative border border-white/10">
-            <div className="text-6xl font-serif absolute top-6 left-6 opacity-20">"</div>
-            <p className="text-lg font-medium relative z-10 mb-8 leading-relaxed">
-              "I was spending $2k/month on Zapier. The custom backend First Radicle built cut our operational costs by 90% and runs 10x faster."
-            </p>
-            <div className="flex items-center gap-4">
-              <img src="/images/avatar-marcus.jpg" alt="Marcus Chen" className="w-12 h-12 rounded-full object-cover border-2 border-white/20" />
-              <div>
-                <div className="font-serif font-bold text-lg">Marcus Chen</div>
-                <div className="text-sm opacity-80">CEO, DataSync</div>
-              </div>
-            </div>
-          </div>
+        <div className="max-w-4xl mx-auto px-12">
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full"
+          >
+            <CarouselContent>
+              {[
+                {
+                  name: "Sarah Jenkins",
+                  role: "Founder",
+                  quote: "We hit 5,000 users on Bubble and the app just stopped working. First Radicle migrated us in 5 weeks. We just raised our Seed round on the new tech stack.",
+                  avatar: "/images/avatar-sarah.jpg"
+                },
+                {
+                  name: "Marcus Chen",
+                  role: "CEO",
+                  quote: "I was spending $2k/month on Zapier. The custom backend First Radicle built cut our operational costs by 90% and runs 10x faster.",
+                  avatar: "/images/avatar-marcus.jpg"
+                },
+                {
+                  name: "Elena Rodriguez",
+                  role: "CTO",
+                  quote: "Our Webflow site looked great but couldn't handle complex user auth. First Radicle ported it to Next.js without losing our design identity. Now we have real user accounts.",
+                  avatar: "/images/avatar-elena.jpg"
+                },
+                {
+                  name: "David Park",
+                  role: "Founder",
+                  quote: "Airtable was great for prototyping, but we hit the record limit in 3 months. The migration to a real Postgres database was seamless. No data lost, just infinite scale.",
+                  avatar: "/images/avatar-david.jpg"
+                },
+                {
+                  name: "Priya Patel",
+                  role: "Co-Founder",
+                  quote: "I was terrified of 'owning the code' because I'm not technical. First Radicle's handover process was incredible. I actually understand how my app works now.",
+                  avatar: "/images/avatar-priya.jpg"
+                }
+              ].map((testimonial, index) => (
+                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/2 pl-6">
+                  <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl relative border border-white/10 h-full flex flex-col">
+                    <div className="text-6xl font-serif absolute top-4 left-4 opacity-20">"</div>
+                    <p className="text-lg font-medium relative z-10 mb-6 leading-relaxed flex-grow">
+                      "{testimonial.quote}"
+                    </p>
+                    <div className="flex items-center gap-4 mt-auto">
+                      <img src={testimonial.avatar} alt={testimonial.name} className="w-12 h-12 rounded-full object-cover border-2 border-white/20" />
+                      <div>
+                        <div className="font-serif font-bold text-lg">{testimonial.name}</div>
+                        <div className="text-sm opacity-80">{testimonial.role}</div>
+                      </div>
+                    </div>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="bg-white/10 border-white/20 text-white hover:bg-white/20 hover:text-white" />
+            <CarouselNext className="bg-white/10 border-white/20 text-white hover:bg-white/20 hover:text-white" />
+          </Carousel>
         </div>
       </Section>
 
