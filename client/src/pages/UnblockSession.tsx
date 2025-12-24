@@ -138,19 +138,23 @@ export default function UnblockSession() {
             <div className="grid md:grid-cols-2 gap-4 text-left">
               <div className="flex items-center gap-3">
                 <Check className="w-5 h-5 text-chart-2" />
-                <span>45-minute screen share</span>
+                <span>1-hour deep dive call</span>
               </div>
               <div className="flex items-center gap-3">
                 <Check className="w-5 h-5 text-chart-2" />
-                <span>Code review included</span>
+                <span>Architecture review</span>
               </div>
               <div className="flex items-center gap-3">
                 <Check className="w-5 h-5 text-chart-2" />
-                <span>Recording of the session</span>
+                <span>Migration roadmap</span>
               </div>
               <div className="flex items-center gap-3">
                 <Check className="w-5 h-5 text-chart-2" />
-                <span>Follow-up resources</span>
+                <span>Cost savings analysis</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <Check className="w-5 h-5 text-chart-2" />
+                <span>Risk assessment</span>
               </div>
             </div>
           </div>
