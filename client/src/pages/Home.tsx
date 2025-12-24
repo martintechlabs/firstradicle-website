@@ -334,9 +334,9 @@ export default function Home() {
         
         <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto items-center">
           <PricingCard 
-            title="Strategy Audit"
+            title="Unblock Session"
             price="$249"
-            ctaText="Book Audit"
+            ctaText="Book Session"
             features={[
               "1-hour deep dive call",
               "Architecture review",
