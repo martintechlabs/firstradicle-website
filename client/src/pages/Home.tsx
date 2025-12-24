@@ -37,7 +37,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4 mt-8">
               <Link href="/unblock">
                 <OrganicButton className="text-lg px-8 py-4">
-                  Book Architect Review
+                  Book Unblock Session
                 </OrganicButton>
               </Link>
               <a href="#process">

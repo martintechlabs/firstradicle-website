@@ -23,7 +23,7 @@ export default function UnblockSession() {
           </Subheadline>
           <div className="flex flex-col sm:flex-row gap-4">
             <OrganicButton className="h-14 px-8 text-lg">
-              Book Architect Review ($249)
+              Book Unblock Session ($249)
             </OrganicButton>
             <p className="text-sm text-muted-foreground self-center sm:ml-4">
               100% Money-back guarantee if we can't help.
@@ -127,7 +127,7 @@ export default function UnblockSession() {
           <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 md:p-12 border border-white/20 mb-12">
             <div className="flex flex-col md:flex-row items-center justify-between gap-8">
               <div className="text-left">
-                <div className="text-2xl font-bold mb-2">Architect Review</div>
+                <div className="text-2xl font-bold mb-2">Unblock Session</div>
                 <div className="text-primary-foreground/80">Strategic intervention & code audit</div>
               </div>
               <div className="text-5xl font-bold font-sans">
@@ -155,7 +155,7 @@ export default function UnblockSession() {
             </div>
           </div>
           <button className="bg-white text-primary hover:bg-chart-2 hover:text-white transition-colors px-10 py-5 rounded-full font-bold text-xl inline-flex items-center gap-3 shadow-lg hover:shadow-xl transform hover:-translate-y-1 duration-300">
-            Book Priority Review <ArrowRight className="w-6 h-6" />
+            Book Unblock Session <ArrowRight className="w-6 h-6" />
           </button>
           <p className="mt-6 text-primary-foreground/60 text-sm">
             Limited spots available per week.
