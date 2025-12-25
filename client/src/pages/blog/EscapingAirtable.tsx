@@ -205,11 +205,11 @@ interface DbShipment {
             <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
               We've built these migration scripts dozens of times. We can move your data safely and securely in less than a week.
             </p>
-            <a href="https://calendly.com/martintechlabs/first-radicle-unblock-session" target="_blank" rel="noopener noreferrer">
+            <Link href="/unblock">
               <OrganicButton className="text-lg px-8 py-4">
                 Book an Unblock Session
               </OrganicButton>
-            </a>
+            </Link>
           </div>
 
         </div>

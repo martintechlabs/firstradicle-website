@@ -159,11 +159,11 @@ export default function ApiSpaghetti() {
             <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
               We replace fragile no-code workflows with robust, testable code. Stop paying the "No-Code Tax."
             </p>
-            <a href="https://calendly.com/martintechlabs/first-radicle-unblock-session" target="_blank" rel="noopener noreferrer">
+            <Link href="/unblock">
               <OrganicButton className="text-lg px-8 py-4">
                 Book an Unblock Session
               </OrganicButton>
-            </a>
+            </Link>
           </div>
 
         </div>

@@ -171,11 +171,11 @@ new Worker('checkout-queue', async job => {
             <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
               If you're planning a big launch or marketing push, let's make sure your foundation is solid.
             </p>
-            <a href="https://calendly.com/martintechlabs/first-radicle-unblock-session" target="_blank" rel="noopener noreferrer">
+            <Link href="/unblock">
               <OrganicButton className="text-lg px-8 py-4">
                 Book an Unblock Session
               </OrganicButton>
-            </a>
+            </Link>
           </div>
 
         </div>

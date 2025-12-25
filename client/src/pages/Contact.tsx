@@ -1,5 +1,6 @@
 import { Layout } from "@/components/Layout";
 import { Section, Headline, Subheadline, OrganicButton } from "@/components/LandingComponents";
+import { Link } from "wouter";
 
 export default function Contact() {
   return (
@@ -21,11 +22,11 @@ export default function Contact() {
             <p className="text-muted-foreground mb-8">
               The fastest way to get answers. We'll review your current setup and give you a clear roadmap for migration.
             </p>
-            <a href="https://calendly.com/martintechlabs/first-radicle-unblock-session" target="_blank" rel="noopener noreferrer">
+            <Link href="/unblock">
               <OrganicButton className="w-full md:w-auto px-8 py-3">
                 Schedule 30-Min Call
               </OrganicButton>
-            </a>
+            </Link>
           </div>
 
           <div className="text-center text-muted-foreground">

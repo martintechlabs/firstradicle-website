@@ -50,11 +50,11 @@ export default function Guarantee() {
         </div>
 
         <div className="text-center mt-16">
-          <a href="https://calendly.com/martintechlabs/first-radicle-unblock-session" target="_blank" rel="noopener noreferrer">
+          <Link href="/unblock">
             <OrganicButton className="text-lg px-8 py-4">
               Start Your Risk-Free Migration
             </OrganicButton>
-          </a>
+          </Link>
         </div>
       </Section>
     </Layout>

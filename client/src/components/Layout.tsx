@@ -28,11 +28,11 @@ export function Layout({ children }: LayoutProps) {
             <Link href="/#pricing"><a className="hover:text-primary transition-colors">Pricing</a></Link>
             <Link href="/unblock"><a className="hover:text-primary transition-colors font-bold">Unblock Session</a></Link>
           </div>
-          <a href="https://calendly.com/martintechlabs/first-radicle-unblock-session" target="_blank" rel="noopener noreferrer" className="hidden lg:inline-flex">
-            <OrganicButton className="py-2 px-6 text-sm">
+          <Link href="/unblock">
+            <OrganicButton className="hidden lg:inline-flex py-2 px-6 text-sm">
               Book Call <ArrowRight className="ml-2 w-4 h-4" />
             </OrganicButton>
-          </a>
+          </Link>
           <MobileNav />
         </div>
       </nav>
