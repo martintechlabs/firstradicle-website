@@ -154,9 +154,11 @@ export default function UnblockSession() {
               </div>
             </div>
           </div>
-          <button className="bg-white text-primary hover:bg-chart-2 hover:text-white transition-colors px-10 py-5 rounded-full font-bold text-xl inline-flex items-center gap-3 shadow-lg hover:shadow-xl transform hover:-translate-y-1 duration-300">
-            Book Unblock Session <ArrowRight className="w-6 h-6" />
-          </button>
+          <a href="https://calendly.com/martintechlabs/first-radicle-unblock-session" target="_blank" rel="noopener noreferrer">
+            <button className="bg-white text-primary hover:bg-chart-2 hover:text-white transition-colors px-10 py-5 rounded-full font-bold text-xl inline-flex items-center gap-3 shadow-lg hover:shadow-xl transform hover:-translate-y-1 duration-300">
+              Book Unblock Session <ArrowRight className="w-6 h-6" />
+            </button>
+          </a>
           <p className="mt-6 text-primary-foreground/60 text-sm">
             Limited spots available per week.
           </p>

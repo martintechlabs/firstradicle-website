@@ -15,13 +15,11 @@ export default function Home() {
         
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="relative z-10">
-            <Link href="/unblock">
-              <a className="inline-flex items-center gap-2 bg-chart-2 text-primary-foreground px-5 py-2 rounded-full font-sans font-bold text-sm mb-6 hover:bg-chart-2/90 transition-all shadow-md hover:shadow-lg cursor-pointer group border border-chart-2/50">
+            <a href="https://calendly.com/martintechlabs/first-radicle-unblock-session" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-chart-2 text-primary-foreground px-5 py-2 rounded-full font-sans font-bold text-sm mb-6 hover:bg-chart-2/90 transition-all shadow-md hover:shadow-lg cursor-pointer group border border-chart-2/50">
                 <Zap className="w-4 h-4 fill-current" />
                 <span className="tracking-wide">Stuck right now? Get unblocked</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </a>
-            </Link>
             <div className="block mb-8">
               <div className="inline-block bg-primary/10 text-primary px-4 py-1.5 rounded-full font-sans font-medium text-sm">
                 For No-Code Refugees
@@ -35,11 +33,11 @@ export default function Home() {
               We turn struggling no-code projects into scalable, production-ready apps in 6 weeks. Guaranteed.
             </Subheadline>
             <div className="flex flex-col sm:flex-row gap-4 mt-8">
-              <Link href="/unblock">
+              <a href="https://calendly.com/martintechlabs/first-radicle-unblock-session" target="_blank" rel="noopener noreferrer">
                 <OrganicButton className="text-lg px-8 py-4">
                   Book Unblock Session
                 </OrganicButton>
-              </Link>
+              </a>
               <a href="#process">
                 <OrganicButton variant="secondary" className="text-lg px-8 py-4">
                   Explore Full Migration
@@ -337,6 +335,7 @@ export default function Home() {
             title="Unblock Session"
             price="$249"
             ctaText="Book Session"
+            ctaLink="https://calendly.com/martintechlabs/first-radicle-unblock-session"
             features={[
               "45-min deep-dive call",
               "Collaborative review of issue",

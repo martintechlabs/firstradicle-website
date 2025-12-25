@@ -58,9 +58,11 @@ export function MobileNav() {
             </a>
           </Link>
           <div className="pt-2">
-            <OrganicButton className="w-full justify-center">
-              Book Call
-            </OrganicButton>
+            <a href="https://calendly.com/martintechlabs/first-radicle-unblock-session" target="_blank" rel="noopener noreferrer">
+              <OrganicButton className="w-full justify-center">
+                Book Call
+              </OrganicButton>
+            </a>
           </div>
         </div>
       )}

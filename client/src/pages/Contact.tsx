@@ -21,9 +21,11 @@ export default function Contact() {
             <p className="text-muted-foreground mb-8">
               The fastest way to get answers. We'll review your current setup and give you a clear roadmap for migration.
             </p>
-            <OrganicButton className="w-full md:w-auto px-8 py-3">
-              Schedule 30-Min Call
-            </OrganicButton>
+            <a href="https://calendly.com/martintechlabs/first-radicle-unblock-session" target="_blank" rel="noopener noreferrer">
+              <OrganicButton className="w-full md:w-auto px-8 py-3">
+                Schedule 30-Min Call
+              </OrganicButton>
+            </a>
           </div>
 
           <div className="text-center text-muted-foreground">

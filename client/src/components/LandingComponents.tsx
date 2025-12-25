@@ -62,14 +62,22 @@ export function PricingCard({
   price, 
   features, 
   isPopular = false,
-  ctaText = "Get Started"
+  ctaText = "Get Started",
+  ctaLink
 }: { 
   title: string; 
   price: string; 
   features: string[]; 
   isPopular?: boolean;
   ctaText?: string;
+  ctaLink?: string;
 }) {
+  const ButtonComponent = (
+    <OrganicButton variant={isPopular ? "primary" : "secondary"} className="w-full justify-center">
+      {ctaText}
+    </OrganicButton>
+  );
+
   return (
     <div className={cn(
       "organic-card p-8 relative flex flex-col h-full transition-all duration-300",
@@ -92,9 +100,13 @@ export function PricingCard({
         ))}
       </ul>
       
-      <OrganicButton variant={isPopular ? "primary" : "secondary"} className="w-full justify-center">
-        {ctaText}
-      </OrganicButton>
+      {ctaLink ? (
+        <a href={ctaLink} target="_blank" rel="noopener noreferrer" className="w-full">
+          {ButtonComponent}
+        </a>
+      ) : (
+        ButtonComponent
+      )}
     </div>
   );
 }
