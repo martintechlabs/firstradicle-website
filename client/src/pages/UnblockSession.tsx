@@ -22,9 +22,11 @@ export default function UnblockSession() {
             Don't let your project stall. Get unblocked in 45 minutes.
           </Subheadline>
           <div className="flex flex-col sm:flex-row gap-4">
-            <OrganicButton className="h-14 px-8 text-lg">
-              Book Unblock Session ($249)
-            </OrganicButton>
+            <a href="https://calendly.com/martintechlabs/first-radicle-unblock-session" target="_blank" rel="noopener noreferrer">
+              <OrganicButton className="h-14 px-8 text-lg">
+                Book Unblock Session ($249)
+              </OrganicButton>
+            </a>
             <p className="text-sm text-muted-foreground self-center sm:ml-4">
               100% Money-back guarantee if we can't help.
             </p>
