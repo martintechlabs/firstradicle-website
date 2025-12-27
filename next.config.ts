@@ -20,7 +20,14 @@ const nextConfig: NextConfig = {
     }
     return config;
   },
+  turbopack: {
+    resolveAlias: {
+      "tw-animate-css": path.resolve(
+        process.cwd(),
+        "node_modules/tw-animate-css/dist/tw-animate.css"
+      ),
+    },
+  },
 };
 
 export default nextConfig;
-
