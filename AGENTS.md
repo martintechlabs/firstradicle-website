@@ -19,9 +19,9 @@ This document defines the context, rules, and workflows for any AI agent (Manus,
 
 ## 2. Tech Stack (Strict)
 
-*   **Framework:** React 19 + Vite (Static Frontend)
-*   **Routing:** `wouter` (Lightweight, no React Router)
-*   **Styling:** Tailwind CSS 4 + CSS Variables (defined in `index.css`)
+*   **Framework:** Next.js 16 (App Router, Static Export)
+*   **Routing:** Next.js App Router (file-based routing)
+*   **Styling:** Tailwind CSS 4 + CSS Variables (defined in `app/globals.css`)
 *   **UI Library:** Radix UI (Headless primitives) + shadcn/ui (Styled components)
 *   **Icons:** `lucide-react`
 *   **Language:** TypeScript (Strict mode)
@@ -40,10 +40,10 @@ This document defines the context, rules, and workflows for any AI agent (Manus,
 
 ## 4. File Structure & Naming
 
-*   `client/src/components/ui/` -> Low-level primitives (Button, Input, Card).
-*   `client/src/components/` -> Compound components (Navbar, Footer, Hero).
-*   `client/src/pages/` -> Page-level layouts.
-*   `client/src/lib/` -> Utilities (`cn`, formatters).
+*   `app/components/ui/` -> Low-level primitives (Button, Input, Card).
+*   `app/components/` -> Compound components (Navbar, Footer, Hero).
+*   `app/` -> Page-level layouts (file-based routing).
+*   `app/lib/` -> Utilities (`cn`, formatters).
 
 **Naming:**
 *   Files: `PascalCase.tsx` (e.g., `PricingCard.tsx`)
@@ -54,8 +54,8 @@ This document defines the context, rules, and workflows for any AI agent (Manus,
 
 ## 5. Workflow for Agents
 
-1.  **Read Context:** Before writing code, read `DESIGN.md` and `client/src/index.css` to understand the available tokens.
-2.  **Check Existing:** Look in `client/src/components/` to see if a component already exists. Do not duplicate.
+1.  **Read Context:** Before writing code, read `DESIGN.md` and `app/globals.css` to understand the available tokens.
+2.  **Check Existing:** Look in `app/components/` to see if a component already exists. Do not duplicate.
 3.  **Plan:** Briefly outline the component structure and which Radix primitives will be used.
 4.  **Implement:** Write the code using Tailwind classes and semantic tokens.
 5.  **Verify:** Check for accessibility (keyboard nav, ARIA) and responsiveness.
@@ -65,14 +65,14 @@ This document defines the context, rules, and workflows for any AI agent (Manus,
 ## 6. Common Tasks & Snippets
 
 ### Creating a New Page
-1.  Create `client/src/pages/NewPage.tsx`.
-2.  Add route to `client/src/App.tsx`.
-3.  Use `<Layout>` wrapper.
+1.  Create `app/new-page/page.tsx` (Next.js App Router file-based routing).
+2.  Export default function component.
+3.  Use `<Layout>` wrapper from `app/components/Layout.tsx`.
 
 ### Adding a UI Component
 1.  Check if it requires state (open/close). If yes, find the Radix primitive.
 2.  Install primitive: `npm install @radix-ui/react-dialog` (example).
-3.  Create `client/src/components/ui/Dialog.tsx`.
+3.  Create `app/components/ui/dialog.tsx` (kebab-case for UI components).
 4.  Style using `data-[state=open]:animate-in` classes.
 
 ---
