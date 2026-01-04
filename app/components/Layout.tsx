@@ -115,14 +115,6 @@ export function Layout({ children }: LayoutProps) {
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="/guarantee"
-                    className="hover:text-white transition-colors"
-                  >
-                    Guarantee
-                  </Link>
-                </li>
-                <li>
                   <a
                     href="https://blog.firstradicle.com/"
                     target="_blank"

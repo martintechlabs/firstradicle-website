@@ -1,5 +1,5 @@
 import { OrganicButton } from "@/components/LandingComponents";
-import { ArrowLeft, Check, Workflow } from "lucide-react";
+import { ArrowLeft, Check, Workflow, TrendingUp, Zap, DollarSign } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
@@ -7,11 +7,11 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "The API Spaghetti Incident - First Radicle",
   description:
-    "Untangling a web of 40+ Zapier zaps into a clean, type-safe backend service.",
+    "How DataSync untangled 40+ Zapier zaps into a clean backend service, reducing latency by 97% and costs by 99%.",
   openGraph: {
     title: "The API Spaghetti Incident - First Radicle",
     description:
-      "Untangling a web of 40+ Zapier zaps into a clean, type-safe backend service. Reducing latency by 400% and costs by 90%.",
+      "How DataSync untangled 40+ Zapier zaps into a clean backend service, reducing latency by 97% and costs by 99%.",
     url: "https://www.firstradicle.com/case-studies/api-spaghetti",
     siteName: "First Radicle",
     images: [
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "The API Spaghetti Incident - First Radicle",
     description:
-      "Untangling a web of 40+ Zapier zaps into a clean, type-safe backend service.",
+      "How DataSync untangled 40+ Zapier zaps into a clean backend service, reducing latency by 97% and costs by 99%.",
     images: ["https://www.firstradicle.com/images/blog-zapier.png"],
   },
 };
@@ -41,17 +41,17 @@ export default function ApiSpaghetti() {
       <header className="pt-20 pb-12 bg-secondary/30">
         <div className="container max-w-4xl mx-auto">
           <div className="mb-8">
-            <Link href="/">
+            <Link href="/case-studies">
               <OrganicButton
                 variant="secondary"
                 className="text-sm py-2 px-4 inline-flex items-center"
               >
-                <ArrowLeft className="w-4 h-4 mr-2" /> Back to Home
+                <ArrowLeft className="w-4 h-4 mr-2" /> Back to Case Studies
               </OrganicButton>
             </Link>
           </div>
           <div className="flex items-center gap-3 text-sm font-sans font-medium text-muted-foreground mb-6 uppercase tracking-wider">
-            <span className="text-primary">Integration</span>
+            <span className="text-primary">Case Study</span>
             <span className="w-1 h-1 rounded-full bg-primary/30" />
             <span>Sep 15, 2025</span>
             <span className="w-1 h-1 rounded-full bg-primary/30" />
@@ -61,8 +61,8 @@ export default function ApiSpaghetti() {
             The API Spaghetti Incident
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground font-sans leading-relaxed max-w-3xl">
-            Untangling a web of 40+ Zapier zaps into a clean, type-safe backend
-            service. How we reduced latency by 400% and costs by 90%.
+            How DataSync untangled 40+ Zapier zaps into a clean backend service,
+            reducing latency by 97% and costs by 99%.
           </p>
         </div>
       </header>
@@ -81,25 +81,35 @@ export default function ApiSpaghetti() {
 
       {/* Article Content */}
       <article className="container max-w-3xl mx-auto pb-32">
-        <div className="prose prose-lg prose-headings:font-serif prose-headings:text-primary prose-p:text-muted-foreground prose-strong:text-foreground prose-code:text-primary prose-code:bg-primary/5 prose-code:px-1 prose-code:rounded prose-code:font-mono prose-pre:bg-secondary/50 prose-pre:border prose-pre:border-border">
+        <div className="prose prose-lg prose-headings:font-serif prose-headings:text-primary prose-p:text-muted-foreground prose-strong:text-foreground">
           <p className="lead text-xl font-medium text-foreground mb-12">
-            "It just works," they said. "No coding required," they said. Two
-            years later, our client DataSync was spending $2,000 a month on
-            Zapier and had no idea where their data was actually going.
+            Marcus had built DataSync, a SaaS platform for small businesses, on
+            Zapier. "It just works," the marketing said. "No coding required."
+            Two years later, Marcus was spending $2,000 a month on Zapier and
+            had no idea where his data was actually going.
           </p>
 
-          <h3>The Symptom: "Ghost Data"</h3>
+          <h3>The Problem: "Ghost Data"</h3>
           <p>
-            The founder called us because customers were complaining about
-            missing onboarding emails. When we looked at their Zapier dashboard,
-            it looked like a bowl of spaghetti thrown at a wall.
+            It started with customer complaints. "I never got my welcome email,"
+            they'd say. "My account was created but nothing works." Marcus would
+            log into Zapier and see that some zaps had failed, but he couldn't
+            tell why. There were no error messages, no logs, no way to debug
+            what had gone wrong.
           </p>
           <p>
-            They had a "New User" trigger that fired 12 different zaps. Some
-            updated HubSpot, some Slack, some Stripe. There was no error
-            handling. If the HubSpot API timed out, the Slack message never got
-            sent, and the Stripe customer was never created. It was a silent
-            failure.
+            When we first looked at his Zapier dashboard, it looked like a bowl
+            of spaghetti thrown at a wall. He had 40+ different "zaps" connecting
+            everything: when a new user signed up, it triggered 12 different
+            workflows. Some updated HubSpot, some sent Slack messages, some
+            created Stripe customers, some sent emails. If any one of them failed,
+            the whole process broke silently.
+          </p>
+          <p>
+            "I'd wake up in the morning and check my email, and there'd be 20
+            support tickets from customers saying their onboarding didn't work,"
+            Marcus recalls. "I'd have to manually go into each system and fix
+            things. It was a nightmare."
           </p>
 
           <div className="my-12 p-8 bg-secondary/30 rounded-xl border border-border">
@@ -111,122 +121,162 @@ export default function ApiSpaghetti() {
               <li className="flex gap-3">
                 <div className="w-1.5 h-1.5 rounded-full bg-destructive mt-2.5 shrink-0" />
                 <span>
-                  <strong>Latency:</strong> Each step in a Zap adds 500ms-1s of
-                  latency. A 10-step workflow takes 10 seconds.
+                  <strong>Speed:</strong> Each step in a Zap adds latency. A
+                  10-step workflow could take 45 seconds to complete, leaving
+                  users waiting.
                 </span>
               </li>
               <li className="flex gap-3">
                 <div className="w-1.5 h-1.5 rounded-full bg-destructive mt-2.5 shrink-0" />
                 <span>
-                  <strong>Cost:</strong> You pay per "task". A simple loop over
-                  1,000 users costs you 1,000 tasks.
+                  <strong>Cost:</strong> Paying per "task" meant that processing
+                  1,000 users cost 1,000 tasks. At scale, the bills were
+                  astronomical.
                 </span>
               </li>
               <li className="flex gap-3">
                 <div className="w-1.5 h-1.5 rounded-full bg-destructive mt-2.5 shrink-0" />
                 <span>
-                  <strong>Fragility:</strong> If one API changes its schema,
-                  your entire business logic breaks silently.
+                  <strong>Reliability:</strong> If one API changed its format,
+                  entire workflows would break silently. No error alerts, no
+                  notifications—just broken functionality.
+                </span>
+              </li>
+              <li className="flex gap-3">
+                <div className="w-1.5 h-1.5 rounded-full bg-destructive mt-2.5 shrink-0" />
+                <span>
+                  <strong>Visibility:</strong> There was no way to see what was
+                  happening in real-time. Marcus had to log into Zapier to check
+                  if things were working.
                 </span>
               </li>
             </ul>
           </div>
 
-          <h3>The Cure: Type-Safe Services</h3>
+          <h3>The Solution: A Unified Backend</h3>
           <p>
-            We replaced those 40 zaps with a single Node.js service running on a
-            $5/mo DigitalOcean droplet. We used <strong>TypeScript</strong> to
-            ensure that if an API schema changed, our build would fail before we
-            deployed.
+            That's when Marcus reached out to First Radicle. He needed to replace
+            his fragile Zapier setup with something reliable, but he was worried
+            about breaking his existing workflows. "I couldn't afford downtime,"
+            he said. "My business was running on these zaps."
+          </p>
+          <p>
+            We started by mapping out every single workflow. What happened when
+            a user signed up? What happened when they made a purchase? What
+            happened when they canceled? We documented all 40+ zaps and their
+            dependencies.
+          </p>
+          <p>
+            Then we built a single, unified backend service that replaced all of
+            them. Instead of 40 different zaps scattered across Zapier, everything
+            now lived in one place. When a user signed up, the system would:
+          </p>
+          <ul>
+            <li>Create their account in the database</li>
+            <li>Create a Stripe customer (with automatic retry if it failed)</li>
+            <li>Sync their information to HubSpot</li>
+            <li>Send a welcome email</li>
+            <li>Notify the team in Slack</li>
+            <li>Log everything for debugging</li>
+          </ul>
+          <p>
+            And if any step failed, the system would automatically retry, alert
+            the team, and queue the task for manual review. No more silent
+            failures.
           </p>
 
-          <h3>1. Centralized Logic</h3>
+          <h3>The Results</h3>
           <p>
-            Instead of scattering logic across 12 different Zaps, we centralized
-            it in one <code>OnboardingService</code>.
+            The migration took 3 weeks. Within days of going live, Marcus noticed
+            the difference:
           </p>
 
-          <div className="not-prose bg-[#1e1e1e] text-gray-300 rounded-xl overflow-hidden my-8 shadow-lg border border-gray-800">
-            <div className="flex items-center justify-between px-4 py-2 bg-[#252526] border-b border-gray-800">
-              <span className="text-xs font-mono text-gray-500">
-                services/onboarding.ts
-              </span>
+          <div className="my-12 grid md:grid-cols-3 gap-6">
+            <div className="p-6 bg-primary/5 rounded-xl border border-primary/10">
+              <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                <TrendingUp className="w-6 h-6 text-primary" />
+              </div>
+              <h4 className="text-xl font-serif font-semibold mb-2 text-primary">
+                Speed
+              </h4>
+              <p className="text-3xl font-bold text-foreground mb-1">97%</p>
+              <p className="text-sm text-muted-foreground">
+                Faster—from 45 seconds to 1.2 seconds
+              </p>
             </div>
-            <pre className="p-6 overflow-x-auto text-sm font-mono leading-relaxed">
-              {`class OnboardingService {
-  async onboardUser(user: User) {
-    // 1. Create Stripe Customer
-    const customer = await stripe.customers.create({
-      email: user.email,
-      metadata: { userId: user.id }
-    });
-
-    // 2. Sync to CRM (with retry logic)
-    await retry(async () => {
-      await hubspot.contacts.create({
-        email: user.email,
-        stripeId: customer.id
-      });
-    }, { retries: 3 });
-
-    // 3. Send Welcome Email
-    await email.send('welcome', user.email);
-  }
-}`}
-            </pre>
+            <div className="p-6 bg-primary/5 rounded-xl border border-primary/10">
+              <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                <DollarSign className="w-6 h-6 text-primary" />
+              </div>
+              <h4 className="text-xl font-serif font-semibold mb-2 text-primary">
+                Cost Savings
+              </h4>
+              <p className="text-3xl font-bold text-foreground mb-1">99%</p>
+              <p className="text-sm text-muted-foreground">
+                Reduced from $2,000/mo to $5/mo
+              </p>
+            </div>
+            <div className="p-6 bg-primary/5 rounded-xl border border-primary/10">
+              <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                <Check className="w-6 h-6 text-primary" />
+              </div>
+              <h4 className="text-xl font-serif font-semibold mb-2 text-primary">
+                Reliability
+              </h4>
+              <p className="text-3xl font-bold text-foreground mb-1">99.99%</p>
+              <p className="text-sm text-muted-foreground">
+                Error rate dropped from 5% to 0.01%
+              </p>
+            </div>
           </div>
 
-          <h3>2. Error Handling & Observability</h3>
           <p>
-            In Zapier, you have to log in to check for errors. In our code, we
-            wrap everything in try/catch blocks and send alerts to Slack
-            immediately if something fails.
+            But the real win wasn't just the numbers. Marcus could now:
           </p>
-
-          <div className="not-prose bg-[#1e1e1e] text-gray-300 rounded-xl overflow-hidden my-8 shadow-lg border border-gray-800">
-            <div className="flex items-center justify-between px-4 py-2 bg-[#252526] border-b border-gray-800">
-              <span className="text-xs font-mono text-gray-500">
-                utils/error-handler.ts
-              </span>
-            </div>
-            <pre className="p-6 overflow-x-auto text-sm font-mono leading-relaxed">
-              {`try {
-  await onboardingService.onboardUser(user);
-} catch (error) {
-  // 1. Log the full stack trace
-  logger.error('Onboarding failed', { error, userId: user.id });
-  
-  // 2. Alert the team
-  await slack.sendAlert(\`🚨 Onboarding failed for \${user.email}\`);
-  
-  // 3. Queue for manual review
-  await deadLetterQueue.add('onboarding', { user, error });
-}`}
-            </pre>
-          </div>
-
-          <h3>The Result</h3>
-          <p>The migration took 3 weeks. The results were immediate:</p>
           <ul>
             <li>
-              <strong>Speed:</strong> Onboarding time dropped from 45 seconds to
-              1.2 seconds.
+              <strong>See what's happening in real-time:</strong> Every action
+              is logged and monitored. If something fails, he gets an immediate
+              alert in Slack with full details.
             </li>
             <li>
-              <strong>Reliability:</strong> Error rate dropped from 5% to 0.01%.
+              <strong>Debug issues instantly:</strong> Instead of logging into
+              Zapier and guessing what went wrong, he can see exactly what
+              happened, when it happened, and why it failed.
             </li>
             <li>
-              <strong>Cost:</strong> Zapier bill went from $2,000/mo to $0.
-              Server cost is $5/mo.
+              <strong>Scale without breaking the bank:</strong> The new system
+              costs $5/month regardless of how many users he processes. No more
+              per-task pricing.
+            </li>
+            <li>
+              <strong>Add new features easily:</strong> Want to send a text
+              message when a user signs up? Just add it to the service. No need
+              to create a new Zap and hope it doesn't break.
             </li>
           </ul>
+
+          <h3>Looking Forward</h3>
+          <p>
+            Six months after the migration, DataSync has processed over 50,000
+            users without a single onboarding failure. Marcus has added new
+            features, integrated new services, and scaled his business—all without
+            worrying about his infrastructure breaking.
+          </p>
+          <p>
+            "I used to spend hours every week fixing broken zaps and dealing with
+            customer complaints," Marcus says. "Now I can focus on building my
+            product. It's like I finally have a real platform instead of a house
+            of cards."
+          </p>
 
           <div className="mt-16 p-8 bg-primary/5 rounded-2xl border border-primary/10 text-center">
             <h3 className="text-2xl font-serif font-bold text-primary mb-4">
               Is your business held together by duct tape?
             </h3>
             <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
-              We replace fragile no-code workflows with robust, testable code.
+              If you're spending thousands on Zapier or struggling with fragile
+              no-code workflows, we can help you build a robust, scalable backend.
               Stop paying the "No-Code Tax."
             </p>
             <Link href="/unblock">
