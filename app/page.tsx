@@ -204,8 +204,8 @@ export default function Home() {
                   <strong className="text-foreground block mb-1">
                     It crashes under load.
                   </strong>{" "}
-                  One viral post and your Bubble database chokes. You lose users
-                  faster than you gain them.
+                  One viral post and your platform chokes. You lose users faster
+                  than you gain them.
                 </p>
               </div>
               <div className="flex gap-6 items-start">
@@ -214,10 +214,11 @@ export default function Home() {
                 </div>
                 <p>
                   <strong className="text-foreground block mb-1">
-                    Zapier bills are bleeding you dry.
+                    Your integrations are a tangled mess.
                   </strong>{" "}
-                  You're paying $500/mo just to move data from A to B. It's
-                  inefficient and expensive.
+                  You make a change in one place and it breaks something in
+                  another. You have no way to keep the app stable and customers
+                  happy.
                 </p>
               </div>
               <div className="flex gap-6 items-start">
