@@ -63,6 +63,7 @@ export function Layout({ children }: LayoutProps) {
                 <li><Link href="/about" className="hover:text-white transition-colors">About</Link></li>
                 <li><Link href="/contact" className="hover:text-white transition-colors">Contact</Link></li>
                 <li><Link href="/guarantee" className="hover:text-white transition-colors">Guarantee</Link></li>
+                <li><a href="https://blog.firstradicle.com/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Blog</a></li>
               </ul>
             </div>
           </div>

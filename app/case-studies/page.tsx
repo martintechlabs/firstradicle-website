@@ -8,21 +8,21 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Blog - First Radicle",
+  title: "Case Studies - First Radicle",
   description:
-    "Technical migration stories and deep dives into engineering challenges.",
+    "Real migration stories and deep dives into engineering challenges.",
   openGraph: {
-    title: "Blog - First Radicle",
+    title: "Case Studies - First Radicle",
     description:
-      "Technical migration stories and deep dives into engineering challenges.",
-    url: "https://www.firstradicle.com/blog",
+      "Real migration stories and deep dives into engineering challenges.",
+    url: "https://www.firstradicle.com/case-studies",
     siteName: "First Radicle",
     images: [
       {
         url: "https://www.firstradicle.com/images/logo.png",
         width: 1200,
         height: 630,
-        alt: "First Radicle Blog",
+        alt: "First Radicle Case Studies",
       },
     ],
     locale: "en_US",
@@ -30,21 +30,21 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Blog - First Radicle",
+    title: "Case Studies - First Radicle",
     description:
-      "Technical migration stories and deep dives into engineering challenges.",
+      "Real migration stories and deep dives into engineering challenges.",
     images: ["https://www.firstradicle.com/images/logo.png"],
   },
 };
 
-export default function Blog() {
+export default function CaseStudies() {
   return (
     <Section className="pt-32 pb-20 bg-secondary/30">
       <div className="text-center max-w-4xl mx-auto mb-16">
         <div className="inline-block bg-primary/10 text-primary px-4 py-1.5 rounded-full font-sans font-medium text-sm mb-6">
-          From the Roots
+          Case Studies
         </div>
-        <Headline>Technical Migration Stories</Headline>
+        <Headline>Real Problems. Real Solutions.</Headline>
         <Subheadline className="mx-auto">
           Deep dives into the engineering challenges of moving from no-code to
           code. Real problems, real solutions.
@@ -80,3 +80,4 @@ export default function Blog() {
     </Section>
   );
 }
+

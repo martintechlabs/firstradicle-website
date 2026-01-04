@@ -152,7 +152,7 @@ export function BlogCard({
   slug: string;
 }) {
   return (
-    <Link href={`/blog/${slug}`} className="organic-card group overflow-hidden block hover:-translate-y-1 transition-all duration-300 bg-white/50 hover:bg-white/80">
+    <Link href={`/case-studies/${slug}`} className="organic-card group overflow-hidden block hover:-translate-y-1 transition-all duration-300 bg-white/50 hover:bg-white/80">
       <div className="relative h-48 overflow-hidden">
         <Image 
           src={image} 

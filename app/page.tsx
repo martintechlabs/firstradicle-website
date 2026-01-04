@@ -53,7 +53,7 @@ export default function Home() {
             </Link>
             <div className="block mb-8">
               <div className="inline-block bg-primary/10 text-primary px-4 py-1.5 rounded-full font-sans font-medium text-sm">
-                For No-Code Refugees
+                For No-Code / Vibe-Code Refugees
               </div>
             </div>
             <Headline>
@@ -439,22 +439,22 @@ export default function Home() {
         </div>
       </Section>
 
-      {/* Blog Section */}
+      {/* Case Studies Section */}
       <Section className="bg-secondary/30">
         <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
           <div className="max-w-2xl">
             <div className="inline-block bg-primary/10 text-primary px-4 py-1.5 rounded-full font-sans font-medium text-sm mb-6">
-              From the Roots
+              Case Studies
             </div>
-            <Headline className="mb-4">Technical Migration Stories</Headline>
+            <Headline className="mb-4">Real Problems. Real Solutions.</Headline>
             <Subheadline className="mb-0">
               Deep dives into the engineering challenges of moving from no-code
               to code. Real problems, real solutions.
             </Subheadline>
           </div>
-          <Link href="/blog">
+          <Link href="/case-studies">
             <OrganicButton variant="secondary" className="shrink-0">
-              View All Stories
+              View All Case Studies
             </OrganicButton>
           </Link>
         </div>
@@ -584,9 +584,11 @@ export default function Home() {
           next month's sprint.
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-6">
-          <OrganicButton className="text-xl px-10 py-5 shadow-lg hover:shadow-xl">
-            Apply Now - $15k Fixed
-          </OrganicButton>
+          <Link href="/contact">
+            <OrganicButton className="text-xl px-10 py-5 shadow-lg hover:shadow-xl">
+              Apply Now - $15k Fixed
+            </OrganicButton>
+          </Link>
           <Link href="/unblock">
             <OrganicButton
               variant="secondary"

@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: "Escaping the Airtable Trap - First Radicle",
     description:
       "How we migrated 50k records from Airtable to PostgreSQL without losing a single record or breaking relationships.",
-    url: "https://www.firstradicle.com/blog/escaping-airtable",
+    url: "https://www.firstradicle.com/case-studies/escaping-airtable",
     siteName: "First Radicle",
     images: [
       {
@@ -299,3 +299,4 @@ interface DbShipment {
     </>
   );
 }
+

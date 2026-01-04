@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: "When the Bubble Burst - First Radicle",
     description:
       "A post-mortem of a Bubble app that crashed at 5k concurrent users, and the Node.js architecture that replaced it to handle 100k.",
-    url: "https://www.firstradicle.com/blog/when-bubble-burst",
+    url: "https://www.firstradicle.com/case-studies/when-bubble-burst",
     siteName: "First Radicle",
     images: [
       {
@@ -266,3 +266,4 @@ new Worker('checkout-queue', async job => {
     </>
   );
 }
+

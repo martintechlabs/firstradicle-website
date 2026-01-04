@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: "The API Spaghetti Incident - First Radicle",
     description:
       "Untangling a web of 40+ Zapier zaps into a clean, type-safe backend service. Reducing latency by 400% and costs by 90%.",
-    url: "https://www.firstradicle.com/blog/api-spaghetti",
+    url: "https://www.firstradicle.com/case-studies/api-spaghetti",
     siteName: "First Radicle",
     images: [
       {
@@ -240,3 +240,4 @@ export default function ApiSpaghetti() {
     </>
   );
 }
+

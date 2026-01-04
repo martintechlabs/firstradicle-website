@@ -200,59 +200,61 @@ export default function UnblockPage() {
       </Section>
 
       {/* Pricing / CTA */}
-      <Section className="bg-primary text-primary-foreground relative overflow-hidden">
-        <div
-          className="absolute inset-0 opacity-10 bg-cover bg-center mix-blend-overlay"
-          style={{ backgroundImage: "url(/images/process-blueprint.png)" }}
-        />
-        <div className="relative z-10 max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-serif font-bold mb-8">
-            Ready to Ship?
-          </h2>
-          <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 md:p-12 border border-white/20 mb-12">
-            <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-              <div className="text-left">
-                <div className="text-2xl font-bold mb-2">Unblock Session</div>
-                <div className="text-primary-foreground/80">
-                  Strategic intervention & code audit
+      <div className="mb-16 md:mb-24">
+        <Section className="bg-primary text-primary-foreground relative overflow-hidden pb-32 md:pb-40">
+          <div
+            className="absolute inset-0 opacity-10 bg-cover bg-center mix-blend-overlay"
+            style={{ backgroundImage: "url(/images/process-blueprint.png)" }}
+          />
+          <div className="relative z-10 max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl md:text-5xl font-serif font-bold mb-8">
+              Ready to Ship?
+            </h2>
+            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 md:p-12 border border-white/20 mb-12">
+              <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+                <div className="text-left">
+                  <div className="text-2xl font-bold mb-2">Unblock Session</div>
+                  <div className="text-primary-foreground/80">
+                    Strategic intervention & code audit
+                  </div>
+                </div>
+                <div className="text-5xl font-bold font-sans">$249</div>
+              </div>
+              <hr className="border-white/20 my-8" />
+              <div className="grid md:grid-cols-2 gap-4 text-left">
+                <div className="flex items-center gap-3">
+                  <Check className="w-5 h-5 text-chart-2" />
+                  <span>45-min deep-dive call</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Check className="w-5 h-5 text-chart-2" />
+                  <span>Collaborative review of issue</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Check className="w-5 h-5 text-chart-2" />
+                  <span>Debugging and resolution</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Check className="w-5 h-5 text-chart-2" />
+                  <span>1-pager of pros/cons of current code</span>
                 </div>
               </div>
-              <div className="text-5xl font-bold font-sans">$249</div>
             </div>
-            <hr className="border-white/20 my-8" />
-            <div className="grid md:grid-cols-2 gap-4 text-left">
-              <div className="flex items-center gap-3">
-                <Check className="w-5 h-5 text-chart-2" />
-                <span>45-min deep-dive call</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <Check className="w-5 h-5 text-chart-2" />
-                <span>Collaborative review of issue</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <Check className="w-5 h-5 text-chart-2" />
-                <span>Debugging and resolution</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <Check className="w-5 h-5 text-chart-2" />
-                <span>1-pager of pros/cons of current code</span>
-              </div>
-            </div>
+            <a
+              href="https://calendly.com/martintechlabs/first-radicle-unblock-session"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className="bg-white text-primary hover:bg-chart-2 hover:text-white transition-colors px-10 py-5 rounded-full font-bold text-xl inline-flex items-center gap-3 shadow-lg hover:shadow-xl transform hover:-translate-y-1 duration-300">
+                Book Unblock Session <ArrowRight className="w-6 h-6" />
+              </button>
+            </a>
+            <p className="mt-6 text-primary-foreground/60 text-sm">
+              Limited spots available per week.
+            </p>
           </div>
-          <a
-            href="https://calendly.com/martintechlabs/first-radicle-unblock-session"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <button className="bg-white text-primary hover:bg-chart-2 hover:text-white transition-colors px-10 py-5 rounded-full font-bold text-xl inline-flex items-center gap-3 shadow-lg hover:shadow-xl transform hover:-translate-y-1 duration-300">
-              Book Unblock Session <ArrowRight className="w-6 h-6" />
-            </button>
-          </a>
-          <p className="mt-6 text-primary-foreground/60 text-sm">
-            Limited spots available per week.
-          </p>
-        </div>
-      </Section>
+        </Section>
+      </div>
     </>
   );
 }
