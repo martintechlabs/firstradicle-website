@@ -30,6 +30,13 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { CALENDLY_LINKS } from "@/lib/constants";
+import {
+  trackBooking,
+  trackCaseStudyClick,
+  trackContentEngagement,
+  trackContactClick,
+  trackScrollEngagement,
+} from "@/lib/analytics";
 
 export default function Home() {
   return (
@@ -45,6 +52,11 @@ export default function Home() {
             <Link
               href="/unblock"
               className="inline-flex items-center gap-2 bg-chart-2 text-primary-foreground px-5 py-2 rounded-full font-sans font-bold text-sm mb-6 hover:bg-chart-2/90 transition-all shadow-md hover:shadow-lg cursor-pointer group border border-chart-2/50"
+              onClick={() =>
+                trackBooking("unblock_session", "hero_banner", {
+                  type: "banner_link",
+                })
+              }
             >
               <Zap className="w-4 h-4 fill-current" />
               <span className="tracking-wide">
@@ -68,12 +80,24 @@ export default function Home() {
               production-ready apps in 6 weeks. Guaranteed.
             </Subheadline>
             <div className="flex flex-col sm:flex-row gap-4 mt-8">
-              <Link href="/unblock">
+              <Link
+                href="/unblock"
+                onClick={() =>
+                  trackBooking("unblock_session", "hero", {
+                    type: "primary_cta",
+                  })
+                }
+              >
                 <OrganicButton className="text-lg px-8 py-4">
                   Book Unblock Session
                 </OrganicButton>
               </Link>
-              <a href="#process">
+              <a
+                href="#process"
+                onClick={() =>
+                  trackScrollEngagement("scroll_to_process", "hero")
+                }
+              >
                 <OrganicButton
                   variant="secondary"
                   className="text-lg px-8 py-4"
@@ -460,7 +484,12 @@ export default function Home() {
               to code. Real problems, real solutions.
             </Subheadline>
           </div>
-          <Link href="/case-studies">
+          <Link
+            href="/case-studies"
+            onClick={() =>
+              trackContentEngagement("view_all", "case_studies_section")
+            }
+          >
             <OrganicButton variant="secondary" className="shrink-0">
               View All Case Studies
             </OrganicButton>
@@ -475,6 +504,7 @@ export default function Home() {
             date="Oct 12, 2025"
             readTime="8 min read"
             slug="escaping-airtable"
+            onCaseStudyClick={slug => trackCaseStudyClick(slug, "homepage")}
           />
           <BlogCard
             title="When the Bubble Burst: Handling Viral Load"
@@ -483,6 +513,7 @@ export default function Home() {
             date="Sep 28, 2025"
             readTime="12 min read"
             slug="when-bubble-burst"
+            onCaseStudyClick={slug => trackCaseStudyClick(slug, "homepage")}
           />
           <BlogCard
             title="The API Spaghetti Incident"
@@ -491,6 +522,7 @@ export default function Home() {
             date="Sep 15, 2025"
             readTime="6 min read"
             slug="api-spaghetti"
+            onCaseStudyClick={slug => trackCaseStudyClick(slug, "homepage")}
           />
         </div>
       </Section>
@@ -511,6 +543,11 @@ export default function Home() {
             ctaText="Book Session"
             ctaLink="/unblock"
             ctaExternal={false}
+            onCtaClick={() =>
+              trackBooking("unblock_session", "pricing_card", {
+                type: "pricing_cta",
+              })
+            }
             features={[
               "45-min deep-dive call",
               "Collaborative review of issue",
@@ -525,6 +562,12 @@ export default function Home() {
             ctaText="Start Application"
             ctaLink={CALENDLY_LINKS.MVP_BUILD_APPLICATION}
             ctaExternal={true}
+            onCtaClick={() =>
+              trackBooking("mvp_application", "pricing_card", {
+                type: "pricing_cta",
+                plan: "mvp_build",
+              })
+            }
             features={[
               "Full Stack Migration",
               "Data Migration",
@@ -540,6 +583,12 @@ export default function Home() {
             ctaText="Contact Us"
             ctaLink={CALENDLY_LINKS.MVP_BUILD_APPLICATION}
             ctaExternal={true}
+            onCtaClick={() =>
+              trackBooking("mvp_application", "pricing_card", {
+                type: "pricing_cta",
+                plan: "scale_support",
+              })
+            }
             features={[
               "Ongoing Feature Dev",
 
@@ -560,7 +609,10 @@ export default function Home() {
             <p className="text-lg mb-8 text-muted-foreground">
               Have questions? We have answers.
             </p>
-            <Link href="/contact">
+            <Link
+              href="/contact"
+              onClick={() => trackContactClick("support", "faq_section")}
+            >
               <OrganicButton variant="secondary">Contact Support</OrganicButton>
             </Link>
           </div>
@@ -619,12 +671,24 @@ export default function Home() {
             href={CALENDLY_LINKS.MVP_BUILD_APPLICATION}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() =>
+              trackBooking("mvp_application", "final_cta", {
+                type: "primary_cta",
+              })
+            }
           >
             <OrganicButton className="text-xl px-10 py-5 shadow-lg hover:shadow-xl">
               Apply Now - $15k Fixed
             </OrganicButton>
           </a>
-          <Link href="/unblock">
+          <Link
+            href="/unblock"
+            onClick={() =>
+              trackBooking("unblock_session", "final_cta", {
+                type: "secondary_cta",
+              })
+            }
+          >
             <OrganicButton
               variant="secondary"
               className="text-xl px-10 py-5 bg-white hover:bg-white/80"

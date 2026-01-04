@@ -1,11 +1,9 @@
 import {
   Headline,
-  OrganicButton,
   Section,
   Subheadline,
 } from "@/components/LandingComponents";
 import {
-  ArrowRight,
   Check,
   Clock,
   Code2,
@@ -13,7 +11,7 @@ import {
   Zap,
 } from "lucide-react";
 import type { Metadata } from "next";
-import { CALENDLY_LINKS } from "@/lib/constants";
+import { UnblockHeroCTA, UnblockFinalCTA } from "./UnblockCTAs";
 
 export const metadata: Metadata = {
   title: "Unblock Session - First Radicle",
@@ -66,15 +64,7 @@ export default function UnblockPage() {
             Get unblocked in 45 minutes.
           </Subheadline>
           <div className="flex flex-col sm:flex-row gap-4">
-            <a
-              href={CALENDLY_LINKS.UNBLOCK_SESSION}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <OrganicButton className="h-14 px-8 text-lg">
-                Book Unblock Session ($249)
-              </OrganicButton>
-            </a>
+            <UnblockHeroCTA />
             <p className="text-sm text-muted-foreground self-center sm:ml-4">
               100% Money-back guarantee if we can't help.
             </p>
@@ -241,15 +231,7 @@ export default function UnblockPage() {
                 </div>
               </div>
             </div>
-            <a
-              href={CALENDLY_LINKS.UNBLOCK_SESSION}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <button className="bg-white text-primary hover:bg-chart-2 hover:text-white transition-colors px-10 py-5 rounded-full font-bold text-xl inline-flex items-center gap-3 shadow-lg hover:shadow-xl transform hover:-translate-y-1 duration-300">
-                Book Unblock Session <ArrowRight className="w-6 h-6" />
-              </button>
-            </a>
+            <UnblockFinalCTA />
             <p className="mt-6 text-primary-foreground/60 text-sm">
               Limited spots available per week.
             </p>

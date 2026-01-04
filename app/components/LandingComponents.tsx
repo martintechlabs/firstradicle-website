@@ -102,6 +102,7 @@ export function PricingCard({
   ctaText = "Get Started",
   ctaLink,
   ctaExternal = false,
+  onCtaClick,
 }: {
   title: string;
   price: string;
@@ -110,6 +111,7 @@ export function PricingCard({
   ctaText?: string;
   ctaLink?: string;
   ctaExternal?: boolean;
+  onCtaClick?: () => void;
 }) {
   const ButtonComponent = (
     <OrganicButton
@@ -119,6 +121,10 @@ export function PricingCard({
       {ctaText}
     </OrganicButton>
   );
+
+  const handleClick = () => {
+    onCtaClick?.();
+  };
 
   return (
     <div
@@ -157,16 +163,17 @@ export function PricingCard({
             target="_blank"
             rel="noopener noreferrer"
             className="w-full"
+            onClick={handleClick}
           >
             {ButtonComponent}
           </a>
         ) : (
-          <Link href={ctaLink} className="w-full">
+          <Link href={ctaLink} className="w-full" onClick={handleClick}>
             {ButtonComponent}
           </Link>
         )
       ) : (
-        ButtonComponent
+        <div onClick={handleClick}>{ButtonComponent}</div>
       )}
     </div>
   );
@@ -215,6 +222,7 @@ export function BlogCard({
   date,
   readTime,
   slug,
+  onCaseStudyClick,
 }: {
   title: string;
   excerpt: string;
@@ -222,11 +230,13 @@ export function BlogCard({
   date: string;
   readTime: string;
   slug: string;
+  onCaseStudyClick?: (slug: string) => void;
 }) {
   return (
     <Link
       href={`/case-studies/${slug}`}
       className="organic-card group overflow-hidden block hover:-translate-y-1 transition-all duration-300 bg-white/50 hover:bg-white/80"
+      onClick={() => onCaseStudyClick?.(slug)}
     >
       <div className="relative h-48 overflow-hidden">
         <Image

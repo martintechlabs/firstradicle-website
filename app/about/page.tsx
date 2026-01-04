@@ -2,10 +2,9 @@ import {
   Section,
   Headline,
   Subheadline,
-  OrganicButton,
 } from "@/components/LandingComponents";
-import Link from "next/link";
 import type { Metadata } from "next";
+import { AboutCTA } from "./AboutCTA";
 
 export const metadata: Metadata = {
   title: "About - First Radicle",
@@ -101,11 +100,7 @@ export default function About() {
       </div>
 
       <div className="text-center mt-16">
-        <Link href="/contact">
-          <OrganicButton className="text-lg px-8 py-4">
-            Work With Us
-          </OrganicButton>
-        </Link>
+        <AboutCTA />
       </div>
     </Section>
   );

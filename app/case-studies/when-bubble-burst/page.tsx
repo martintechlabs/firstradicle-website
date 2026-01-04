@@ -1,8 +1,7 @@
-import { OrganicButton } from "@/components/LandingComponents";
-import { ArrowLeft, Zap, TrendingUp, Users, DollarSign, Check } from "lucide-react";
-import Link from "next/link";
+import { Zap, TrendingUp, Users, DollarSign, Check } from "lucide-react";
 import Image from "next/image";
 import type { Metadata } from "next";
+import { BackToCaseStudies, CaseStudyCTA } from "../CaseStudyActions";
 
 export const metadata: Metadata = {
   title: "When the Bubble Burst - First Radicle",
@@ -41,14 +40,7 @@ export default function WhenBubbleBurst() {
       <header className="pt-20 pb-12 bg-secondary/30">
         <div className="container max-w-4xl mx-auto">
           <div className="mb-8">
-            <Link href="/case-studies">
-              <OrganicButton
-                variant="secondary"
-                className="text-sm py-2 px-4 inline-flex items-center"
-              >
-                <ArrowLeft className="w-4 h-4 mr-2" /> Back to Case Studies
-              </OrganicButton>
-            </Link>
+            <BackToCaseStudies />
           </div>
           <div className="flex items-center gap-3 text-sm font-sans font-medium text-muted-foreground mb-6 uppercase tracking-wider">
             <span className="text-primary">Case Study</span>
@@ -256,11 +248,7 @@ export default function WhenBubbleBurst() {
               viral growth, let's make sure your foundation can handle it. We'll
               build you a platform that scales.
             </p>
-            <Link href="/unblock">
-              <OrganicButton className="text-lg px-8 py-4">
-                Book an Unblock Session
-              </OrganicButton>
-            </Link>
+            <CaseStudyCTA />
           </div>
         </div>
       </article>

@@ -4,6 +4,11 @@ import Link from "next/link";
 import Image from "next/image";
 import { OrganicButton } from "./LandingComponents";
 import { MobileNav } from "./MobileNav";
+import {
+  trackBooking,
+  trackNavClick,
+  trackExternalLink,
+} from "@/lib/analytics";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -31,35 +36,45 @@ export function Layout({ children }: LayoutProps) {
             <Link
               href="/#problem"
               className="hover:text-primary transition-colors"
+              onClick={() => trackNavClick("problem", "header")}
             >
               The Problem
             </Link>
             <Link
               href="/#solution"
               className="hover:text-primary transition-colors"
+              onClick={() => trackNavClick("solution", "header")}
             >
               Solution
             </Link>
             <Link
               href="/#process"
               className="hover:text-primary transition-colors"
+              onClick={() => trackNavClick("process", "header")}
             >
               Process
             </Link>
             <Link
               href="/#pricing"
               className="hover:text-primary transition-colors"
+              onClick={() => trackNavClick("pricing", "header")}
             >
               Pricing
             </Link>
             <Link
               href="/unblock"
               className="hover:text-primary transition-colors font-bold"
+              onClick={() => trackNavClick("unblock", "header")}
             >
               Unblock Session
             </Link>
           </div>
-          <Link href="/unblock">
+          <Link
+            href="/unblock"
+            onClick={() =>
+              trackBooking("unblock_session", "header", { type: "navigation" })
+            }
+          >
             <OrganicButton className="hidden lg:inline-flex py-2 px-6 text-sm">
               Book Call
             </OrganicButton>
@@ -102,6 +117,7 @@ export function Layout({ children }: LayoutProps) {
                   <Link
                     href="/about"
                     className="hover:text-white transition-colors"
+                    onClick={() => trackNavClick("about", "footer")}
                   >
                     About
                   </Link>
@@ -110,6 +126,7 @@ export function Layout({ children }: LayoutProps) {
                   <Link
                     href="/contact"
                     className="hover:text-white transition-colors"
+                    onClick={() => trackNavClick("contact", "footer")}
                   >
                     Contact
                   </Link>
@@ -120,6 +137,7 @@ export function Layout({ children }: LayoutProps) {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-white transition-colors"
+                    onClick={() => trackExternalLink("blog", "footer")}
                   >
                     Blog
                   </a>
