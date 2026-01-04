@@ -23,7 +23,7 @@ export function trackBooking(
  */
 export function trackNavClick(
   destination: string,
-  location: "header" | "footer" | "mobile_nav"
+  location: "header" | "footer" | "mobile_nav" | "case_study_page" | "about_page"
 ) {
   track("nav_click", {
     location,

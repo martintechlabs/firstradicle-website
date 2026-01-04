@@ -1,24 +1,26 @@
 1:"$Sreact.fragment"
-2:I[3204,["374","static/chunks/374-85a8426739003d61.js","177","static/chunks/app/layout-1be92dc978f6506c.js"],"Provider"]
-3:I[585,["374","static/chunks/374-85a8426739003d61.js","177","static/chunks/app/layout-1be92dc978f6506c.js"],"Toaster"]
-4:I[3066,["374","static/chunks/374-85a8426739003d61.js","177","static/chunks/app/layout-1be92dc978f6506c.js"],"default"]
-5:I[2844,[],""]
-6:I[9356,["198","static/chunks/198-20ee7a42fb36a3cb.js","39","static/chunks/app/error-ea2cb049d32b3032.js"],"default"]
-7:I[8602,[],""]
-8:I[7786,["198","static/chunks/198-20ee7a42fb36a3cb.js","345","static/chunks/app/not-found-760f9e738ba3b95d.js"],"default"]
-9:I[4617,[],"ClientPageRoot"]
-c:I[4057,[],"OutletBoundary"]
-d:"$Sreact.suspense"
-f:I[4057,[],"ViewportBoundary"]
-11:I[4057,[],"MetadataBoundary"]
-13:I[1672,[],""]
+2:I[3204,["234","static/chunks/234-173e0e0ef0a21e0d.js","32","static/chunks/32-5742e53fdfa98211.js","177","static/chunks/app/layout-c0184eaff5e15633.js"],"Provider"]
+3:I[585,["234","static/chunks/234-173e0e0ef0a21e0d.js","32","static/chunks/32-5742e53fdfa98211.js","177","static/chunks/app/layout-c0184eaff5e15633.js"],"Toaster"]
+4:I[3066,["234","static/chunks/234-173e0e0ef0a21e0d.js","32","static/chunks/32-5742e53fdfa98211.js","177","static/chunks/app/layout-c0184eaff5e15633.js"],"default"]
+5:I[3972,["234","static/chunks/234-173e0e0ef0a21e0d.js","32","static/chunks/32-5742e53fdfa98211.js","177","static/chunks/app/layout-c0184eaff5e15633.js"],"Layout"]
+6:I[2844,[],""]
+7:I[9356,["234","static/chunks/234-173e0e0ef0a21e0d.js","39","static/chunks/app/error-c9bc5111b4d5baad.js"],"default"]
+8:I[8602,[],""]
+9:I[4751,["234","static/chunks/234-173e0e0ef0a21e0d.js","345","static/chunks/app/not-found-291c0d0606a798d2.js"],"default"]
+a:I[7342,["234","static/chunks/234-173e0e0ef0a21e0d.js","32","static/chunks/32-5742e53fdfa98211.js","177","static/chunks/app/layout-c0184eaff5e15633.js"],"Analytics"]
+b:I[4617,[],"ClientPageRoot"]
+e:I[4057,[],"OutletBoundary"]
+f:"$Sreact.suspense"
+11:I[4057,[],"ViewportBoundary"]
+13:I[4057,[],"MetadataBoundary"]
+15:I[1672,[],""]
 :HL["/_next/static/media/7b0b24f36b1a6d0b-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/media/af4bf8399d1aacdf-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-:HL["/_next/static/css/6434915189feccb4.css","style"]
-0:{"P":null,"b":"k7Cjo5BSVTdIXTzcBDI7I","c":["","_not-found"],"q":"","i":false,"f":[[["",{"children":["_not-found",{"children":["__PAGE__",{}]}]},"$undefined","$undefined",true],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/6434915189feccb4.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":["$","body",null,{"className":"__variable_eb41fe __variable_543835","children":["$","$L2",null,{"data-slot":"tooltip-provider","delayDuration":0,"children":[["$","$L3",null,{}],["$","$L4",null,{}],["$","$L5",null,{"parallelRouterKey":"children","error":"$6","errorStyles":[],"errorScripts":[],"template":["$","$L7",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","$L8",null,{}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]]}]}]}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L5",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L7",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[["$","$L9",null,{"Component":"$8","serverProvidedParams":{"searchParams":{},"params":{},"promises":["$@a","$@b"]}}],null,["$","$Lc",null,{"children":["$","$d",null,{"name":"Next.MetadataOutlet","children":"$@e"}]}]]}],{},null,false,false]},null,false,false]},null,false,false],["$","$1","h",{"children":[["$","meta",null,{"name":"robots","content":"noindex"}],["$","$Lf",null,{"children":"$L10"}],["$","div",null,{"hidden":true,"children":["$","$L11",null,{"children":["$","$d",null,{"name":"Next.Metadata","children":"$L12"}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],false]],"m":"$undefined","G":["$13",[]],"S":true}
-a:{}
-b:"$0:f:0:1:1:children:1:children:0:props:children:0:props:serverProvidedParams:params"
-10:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
-14:I[428,[],"IconMark"]
-e:null
-12:[["$","title","0",{"children":"First Radicle - Scalable Apps for No-Code Refugees"}],["$","meta","1",{"name":"description","content":"We turn struggling no-code projects into scalable, production-ready apps in 6 weeks. Guaranteed."}],["$","link","2",{"rel":"icon","href":"/favicon.png"}],["$","$L14","3",{}]]
+:HL["/_next/static/css/f64d6c810075b12f.css","style"]
+0:{"P":null,"b":"abYTtKCT2ucqN4Ul40wSz","c":["","_not-found"],"q":"","i":false,"f":[[["",{"children":["_not-found",{"children":["__PAGE__",{}]}]},"$undefined","$undefined",true],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/f64d6c810075b12f.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":["$","body",null,{"className":"__variable_eb41fe __variable_543835","children":[["$","$L2",null,{"data-slot":"tooltip-provider","delayDuration":0,"children":[["$","$L3",null,{}],["$","$L4",null,{}],["$","$L5",null,{"children":["$","$L6",null,{"parallelRouterKey":"children","error":"$7","errorStyles":[],"errorScripts":[],"template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","$L9",null,{}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]]}],["$","$La",null,{}]]}]}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L6",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L8",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[["$","$Lb",null,{"Component":"$9","serverProvidedParams":{"searchParams":{},"params":{},"promises":["$@c","$@d"]}}],null,["$","$Le",null,{"children":["$","$f",null,{"name":"Next.MetadataOutlet","children":"$@10"}]}]]}],{},null,false,false]},null,false,false]},null,false,false],["$","$1","h",{"children":[["$","meta",null,{"name":"robots","content":"noindex"}],["$","$L11",null,{"children":"$L12"}],["$","div",null,{"hidden":true,"children":["$","$L13",null,{"children":["$","$f",null,{"name":"Next.Metadata","children":"$L14"}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],false]],"m":"$undefined","G":["$15",[]],"S":true}
+c:{}
+d:"$0:f:0:1:1:children:1:children:0:props:children:0:props:serverProvidedParams:params"
+12:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+16:I[428,[],"IconMark"]
+10:null
+14:[["$","title","0",{"children":"First Radicle - Scalable Apps for No-Code Refugees"}],["$","meta","1",{"name":"description","content":"We turn struggling no-code projects into scalable, production-ready apps in 6 weeks. Guaranteed."}],["$","meta","2",{"property":"og:title","content":"First Radicle - Scalable Apps for No-Code Refugees"}],["$","meta","3",{"property":"og:description","content":"We turn struggling no-code projects into scalable, production-ready apps in 6 weeks. Guaranteed."}],["$","meta","4",{"property":"og:url","content":"https://www.firstradicle.com"}],["$","meta","5",{"property":"og:site_name","content":"First Radicle"}],["$","meta","6",{"property":"og:locale","content":"en_US"}],["$","meta","7",{"property":"og:image","content":"https://www.firstradicle.com/images/hero-growth.png"}],["$","meta","8",{"property":"og:image:width","content":"1200"}],["$","meta","9",{"property":"og:image:height","content":"630"}],["$","meta","10",{"property":"og:image:alt","content":"First Radicle - Scalable Apps for No-Code Refugees"}],["$","meta","11",{"property":"og:type","content":"website"}],["$","meta","12",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","13",{"name":"twitter:title","content":"First Radicle - Scalable Apps for No-Code Refugees"}],["$","meta","14",{"name":"twitter:description","content":"We turn struggling no-code projects into scalable, production-ready apps in 6 weeks. Guaranteed."}],["$","meta","15",{"name":"twitter:image","content":"https://www.firstradicle.com/images/hero-growth.png"}],["$","link","16",{"rel":"icon","href":"/favicon.png"}],["$","$L16","17",{}]]
