@@ -7,11 +7,11 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Escaping the Airtable Trap - First Radicle",
   description:
-    "How a logistics startup hit their limits with Airtable and migrated to a scalable platform, reducing costs by 95% and improving performance by 99%.",
+    "How a logistics startup hit their limits with Airtable and migrated to a scalable platform, reducing costs by 79% and improving performance by 99%.",
   openGraph: {
     title: "Escaping the Airtable Trap - First Radicle",
     description:
-      "How a logistics startup hit their limits with Airtable and migrated to a scalable platform, reducing costs by 95% and improving performance by 99%.",
+      "How a logistics startup hit their limits with Airtable and migrated to a scalable platform, reducing costs by 79% and improving performance by 99%.",
     url: "https://www.firstradicle.com/case-studies/escaping-airtable",
     siteName: "First Radicle",
     images: [
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Escaping the Airtable Trap - First Radicle",
     description:
-      "How a logistics startup hit their limits with Airtable and migrated to a scalable platform, reducing costs by 95% and improving performance by 99%.",
+      "How a logistics startup hit their limits with Airtable and migrated to a scalable platform, reducing costs by 79% and improving performance by 99%.",
     images: ["https://www.firstradicle.com/images/blog-airtable.png"],
   },
 };
@@ -62,7 +62,7 @@ export default function EscapingAirtable() {
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground font-sans leading-relaxed max-w-3xl">
             How a logistics startup hit their limits with Airtable and migrated
-            to a scalable platform, reducing costs by 95% and improving
+            to a scalable platform, reducing costs by 79% and improving
             performance by 99%.
           </p>
         </div>
@@ -221,9 +221,9 @@ export default function EscapingAirtable() {
               <h4 className="text-xl font-serif font-semibold mb-2 text-primary">
                 Cost Savings
               </h4>
-              <p className="text-3xl font-bold text-foreground mb-1">95%</p>
+              <p className="text-3xl font-bold text-foreground mb-1">79%</p>
               <p className="text-sm text-muted-foreground">
-                Reduced from $1,200/mo to $50/mo
+                Reduced from $1,200/mo to $250/mo
               </p>
             </div>
             <div className="p-6 bg-primary/5 rounded-xl border border-primary/10">

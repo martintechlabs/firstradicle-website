@@ -7,11 +7,11 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "The API Spaghetti Incident - First Radicle",
   description:
-    "How DataSync untangled 40+ Zapier zaps into a clean backend service, reducing latency by 97% and costs by 99%.",
+    "How DataSync untangled 40+ Zapier zaps into a clean backend service, reducing latency by 97% and costs by 96%.",
   openGraph: {
     title: "The API Spaghetti Incident - First Radicle",
     description:
-      "How DataSync untangled 40+ Zapier zaps into a clean backend service, reducing latency by 97% and costs by 99%.",
+      "How DataSync untangled 40+ Zapier zaps into a clean backend service, reducing latency by 97% and costs by 96%.",
     url: "https://www.firstradicle.com/case-studies/api-spaghetti",
     siteName: "First Radicle",
     images: [
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "The API Spaghetti Incident - First Radicle",
     description:
-      "How DataSync untangled 40+ Zapier zaps into a clean backend service, reducing latency by 97% and costs by 99%.",
+      "How DataSync untangled 40+ Zapier zaps into a clean backend service, reducing latency by 97% and costs by 96%.",
     images: ["https://www.firstradicle.com/images/blog-zapier.png"],
   },
 };
@@ -62,7 +62,7 @@ export default function ApiSpaghetti() {
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground font-sans leading-relaxed max-w-3xl">
             How DataSync untangled 40+ Zapier zaps into a clean backend service,
-            reducing latency by 97% and costs by 99%.
+            reducing latency by 97% and costs by 96%.
           </p>
         </div>
       </header>
@@ -93,9 +93,11 @@ export default function ApiSpaghetti() {
           <p>
             It started with customer complaints. "I never got my welcome email,"
             they'd say. "My account was created but nothing works." Marcus would
-            log into Zapier and see that some zaps had failed, but he couldn't
-            tell why. There were no error messages, no logs, no way to debug
-            what had gone wrong.
+            log into Zapier and see that some zaps had failed, but tracing the
+            root cause across 40+ interconnected workflows was nearly impossible.
+            Error visibility was fragmented across multiple systems, making it
+            difficult to understand how one failure cascaded through the entire
+            process.
           </p>
           <p>
             When we first looked at his Zapier dashboard, it looked like a bowl
@@ -103,7 +105,8 @@ export default function ApiSpaghetti() {
             everything: when a new user signed up, it triggered 12 different
             workflows. Some updated HubSpot, some sent Slack messages, some
             created Stripe customers, some sent emails. If any one of them failed,
-            the whole process broke silently.
+            the whole process broke, and tracking the failure across all the
+            interconnected zaps was difficult.
           </p>
           <p>
             "I'd wake up in the morning and check my email, and there'd be 20
@@ -121,25 +124,28 @@ export default function ApiSpaghetti() {
               <li className="flex gap-3">
                 <div className="w-1.5 h-1.5 rounded-full bg-destructive mt-2.5 shrink-0" />
                 <span>
-                  <strong>Speed:</strong> Each step in a Zap adds latency. A
-                  10-step workflow could take 45 seconds to complete, leaving
-                  users waiting.
+                  <strong>Speed:</strong> Each step in a Zap adds latency, with
+                  polling intervals and sequential API calls. A 10-step workflow
+                  involving multiple external services could take 45 seconds to
+                  complete, leaving users waiting.
                 </span>
               </li>
               <li className="flex gap-3">
                 <div className="w-1.5 h-1.5 rounded-full bg-destructive mt-2.5 shrink-0" />
                 <span>
-                  <strong>Cost:</strong> Paying per "task" meant that processing
-                  1,000 users cost 1,000 tasks. At scale, the bills were
-                  astronomical.
+                  <strong>Cost:</strong> Paying per "task" meant that each user
+                  signup triggered 12+ workflows, each consuming multiple tasks.
+                  Processing 1,000 users could easily cost 12,000+ tasks. At scale,
+                  the bills were astronomical.
                 </span>
               </li>
               <li className="flex gap-3">
                 <div className="w-1.5 h-1.5 rounded-full bg-destructive mt-2.5 shrink-0" />
                 <span>
                   <strong>Reliability:</strong> If one API changed its format,
-                  entire workflows would break silently. No error alerts, no
-                  notifications—just broken functionality.
+                  entire workflows would break. While Zapier provides error logs,
+                  tracking failures across 40+ interconnected zaps made it
+                  difficult to identify and fix issues before customers noticed.
                 </span>
               </li>
               <li className="flex gap-3">
@@ -211,9 +217,9 @@ export default function ApiSpaghetti() {
               <h4 className="text-xl font-serif font-semibold mb-2 text-primary">
                 Cost Savings
               </h4>
-              <p className="text-3xl font-bold text-foreground mb-1">99%</p>
+              <p className="text-3xl font-bold text-foreground mb-1">96%</p>
               <p className="text-sm text-muted-foreground">
-                Reduced from $2,000/mo to $5/mo
+                Reduced from $2,000/mo to $75/mo
               </p>
             </div>
             <div className="p-6 bg-primary/5 rounded-xl border border-primary/10">
@@ -245,9 +251,10 @@ export default function ApiSpaghetti() {
               happened, when it happened, and why it failed.
             </li>
             <li>
-              <strong>Scale without breaking the bank:</strong> The new system
-              costs $5/month regardless of how many users he processes. No more
-              per-task pricing.
+              <strong>Scale without breaking the bank:</strong> The new system's
+              infrastructure hosting costs approximately $75/month, regardless of
+              how many users he processes. No more per-task pricing that scales
+              linearly with usage.
             </li>
             <li>
               <strong>Add new features easily:</strong> Want to send a text

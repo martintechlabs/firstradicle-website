@@ -7,11 +7,11 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "When the Bubble Burst - First Radicle",
   description:
-    "How a viral TikTok moment crashed a Bubble app at 5k users, and how we rebuilt it to handle 100k+ concurrent users.",
+    "How a viral TikTok moment crashed a Bubble app at 5k users, and how we rebuilt it to handle 25k+ concurrent users.",
   openGraph: {
     title: "When the Bubble Burst - First Radicle",
     description:
-      "How a viral TikTok moment crashed a Bubble app at 5k users, and how we rebuilt it to handle 100k+ concurrent users.",
+      "How a viral TikTok moment crashed a Bubble app at 5k users, and how we rebuilt it to handle 25k+ concurrent users.",
     url: "https://www.firstradicle.com/case-studies/when-bubble-burst",
     siteName: "First Radicle",
     images: [
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "When the Bubble Burst - First Radicle",
     description:
-      "How a viral TikTok moment crashed a Bubble app at 5k users, and how we rebuilt it to handle 100k+ concurrent users.",
+      "How a viral TikTok moment crashed a Bubble app at 5k users, and how we rebuilt it to handle 25k+ concurrent users.",
     images: ["https://www.firstradicle.com/images/blog-bubble.png"],
   },
 };
@@ -62,7 +62,7 @@ export default function WhenBubbleBurst() {
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground font-sans leading-relaxed max-w-3xl">
             How a viral TikTok moment crashed a Bubble app at 5k users, and how
-            we rebuilt it to handle 100k+ concurrent users.
+            we rebuilt it to handle 25k+ concurrent users.
           </p>
         </div>
       </header>
@@ -223,7 +223,7 @@ export default function WhenBubbleBurst() {
             </li>
             <li>
               <strong>Scale without limits:</strong> The platform can handle
-              100,000+ concurrent users without breaking a sweat. Elena never has
+              25,000+ concurrent users without breaking a sweat. Elena never has
               to worry about hitting capacity limits again.
             </li>
           </ul>
@@ -242,7 +242,7 @@ export default function WhenBubbleBurst() {
             whether my app will survive the next viral moment."
           </p>
           <p>
-            The platform that once crashed at 5,000 users now handles 100,000+
+            The platform that once crashed at 5,000 users now handles 25,000+
             without breaking a sweat. Elena went from building a toy to
             cultivating real software.
           </p>

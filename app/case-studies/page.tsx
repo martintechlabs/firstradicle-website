@@ -62,7 +62,7 @@ export default function CaseStudies() {
         />
         <BlogCard
           title="When Bubble Bursts: Handling Viral Traffic"
-          excerpt="A post-mortem of a Bubble app that crashed during a Product Hunt launch, and how we rebuilt it to handle 10k concurrent users."
+          excerpt="A post-mortem of a Bubble app that crashed during a Product Hunt launch, and how we rebuilt it to handle 25k+ concurrent users."
           image="/images/blog-bubble.png"
           date="Nov 03, 2024"
           readTime="6 min read"
@@ -70,7 +70,7 @@ export default function CaseStudies() {
         />
         <BlogCard
           title="Untangling API Spaghetti: Zapier to Node.js"
-          excerpt="Replacing 500+ fragile Zaps with a robust, type-safe Node.js backend. Saving $2k/mo and reducing error rates by 99%."
+          excerpt="Replacing 40+ fragile Zaps with a robust, type-safe Node.js backend. Reducing costs by 96% and error rates by 99.99%."
           image="/images/blog-zapier.png"
           date="Nov 28, 2024"
           readTime="5 min read"

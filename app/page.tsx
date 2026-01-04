@@ -384,7 +384,7 @@ export default function Home() {
                   name: "Marcus Chen",
                   role: "CEO",
                   quote:
-                    "I was spending $2k/month on Zapier. The custom backend First Radicle built cut our operational costs by 90% and runs 10x faster.",
+                    "I was spending $2k/month on Zapier. The custom backend First Radicle built cut our infrastructure costs by 96% and runs 10x faster.",
                   avatar: "/images/avatar-marcus.jpg",
                 },
                 {
@@ -478,7 +478,7 @@ export default function Home() {
           />
           <BlogCard
             title="When the Bubble Burst: Handling Viral Load"
-            excerpt="A post-mortem of a Bubble app that crashed at 5k concurrent users, and the Node.js architecture that replaced it to handle 100k."
+            excerpt="A post-mortem of a Bubble app that crashed at 5k concurrent users, and the Node.js architecture that replaced it to handle 25k."
             image="/images/blog-bubble.png"
             date="Sep 28, 2025"
             readTime="12 min read"
@@ -486,7 +486,7 @@ export default function Home() {
           />
           <BlogCard
             title="The API Spaghetti Incident"
-            excerpt="Untangling a web of 40+ Zapier zips into a clean, type-safe backend service. Reducing latency by 400% and costs by 90%."
+            excerpt="Untangling a web of 40+ Zapier zaps into a clean, type-safe backend service. Reducing latency by 97% and costs by 96%."
             image="/images/blog-zapier.png"
             date="Sep 15, 2025"
             readTime="6 min read"
