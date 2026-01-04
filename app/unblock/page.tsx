@@ -1,5 +1,4 @@
 import { Headline, OrganicButton, Section, Subheadline } from "@/components/LandingComponents";
-import { Layout } from "@/components/Layout";
 import { ArrowRight, Check, Clock, Code2, ShieldCheck, Zap } from "lucide-react";
 import type { Metadata } from "next";
 
@@ -10,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function UnblockPage() {
   return (
-    <Layout>
+    <>
       {/* Hero Section */}
       <Section className="pt-32 pb-20 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary/5 to-transparent -z-10" />
@@ -175,6 +174,6 @@ export default function UnblockPage() {
           </p>
         </div>
       </Section>
-    </Layout>
+    </>
   );
 }

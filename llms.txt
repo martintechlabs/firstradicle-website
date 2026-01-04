@@ -1,0 +1,39 @@
+# First Radicle
+
+> First Radicle is a high-end software agency that helps startups migrate from no-code platforms (Bubble, Airtable, Webflow) to scalable, production-ready code (React, Node.js, PostgreSQL). We deliver complete migrations in 6 weeks for a fixed $15k price with a money-back guarantee. Our core value proposition: "Stop Building Toys. Start Cultivating Software."
+
+First Radicle specializes in helping non-technical founders who have outgrown their MVP and need to scale beyond the limitations of no-code platforms. We use AI-accelerated development to deliver agency-quality builds at a fraction of the cost, while ensuring clients own 100% of their code and IP.
+
+**Key Differentiators:**
+- Fixed-price migrations ($15k for full stack)
+- 6-week delivery guarantee
+- 100% code ownership (GitHub repository transfer)
+- AI-accelerated development with human oversight
+- Production-grade tech stack (React, Next.js, Node.js, PostgreSQL)
+
+**Tech Stack:**
+- Framework: Next.js 16 (App Router, Static Export)
+- Styling: Tailwind CSS 4 + CSS Variables
+- UI Library: Radix UI (Headless primitives) + shadcn/ui
+- Language: TypeScript (Strict mode)
+- Package Manager: pnpm
+- Build Output: Static site generation
+
+## Main Pages
+
+- [Home](https://firstradicle.com/): Landing page with value proposition, process overview, pricing, testimonials, and FAQ
+- [About](https://firstradicle.com/about): Company philosophy, mission, and the "CodeFirst" standard
+- [Contact](https://firstradicle.com/contact): Contact form and information
+- [Unblock Session](https://firstradicle.com/unblock): 45-minute deep-dive call for immediate technical issues ($249)
+- [Guarantee](https://firstradicle.com/guarantee): Money-back guarantee details and terms
+
+## Blog Posts
+
+- [Escaping the Airtable Trap: Migrating 50k Records](https://firstradicle.com/blog/escaping-airtable): Technical deep-dive on migrating complex relational schemas from Airtable to PostgreSQL
+- [When Bubble Bursts: Handling Viral Traffic](https://firstradicle.com/blog/when-bubble-burst): Post-mortem of a Bubble app crash and rebuilding for scale
+- [Untangling API Spaghetti: Zapier to Node.js](https://firstradicle.com/blog/api-spaghetti): Replacing fragile Zapier workflows with robust backend services
+
+## Optional
+
+- [Blog Index](https://firstradicle.com/blog): Complete list of all technical migration stories and engineering case studies
+

@@ -1,5 +1,4 @@
 import { OrganicButton } from "@/components/LandingComponents";
-import { Layout } from "@/components/Layout";
 import { ArrowLeft, Zap } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -12,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function WhenBubbleBurst() {
   return (
-    <Layout>
+    <>
       {/* Article Header */}
       <header className="pt-20 pb-12 bg-secondary/30">
         <div className="container max-w-4xl mx-auto">
@@ -188,6 +187,6 @@ new Worker('checkout-queue', async job => {
 
         </div>
       </article>
-    </Layout>
+    </>
   );
 }

@@ -1,4 +1,3 @@
-import { Layout } from "@/components/Layout";
 import { Section, Headline, Subheadline, BlogCard } from "@/components/LandingComponents";
 import Link from "next/link";
 import type { Metadata } from "next";
@@ -10,7 +9,6 @@ export const metadata: Metadata = {
 
 export default function Blog() {
   return (
-    <Layout>
       <Section className="pt-32 pb-20 bg-secondary/30">
         <div className="text-center max-w-4xl mx-auto mb-16">
           <div className="inline-block bg-primary/10 text-primary px-4 py-1.5 rounded-full font-sans font-medium text-sm mb-6">
@@ -49,6 +47,5 @@ export default function Blog() {
           />
         </div>
       </Section>
-    </Layout>
   );
 }

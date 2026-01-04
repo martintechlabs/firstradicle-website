@@ -43,6 +43,7 @@ This document defines the context, rules, and workflows for any AI agent (Manus,
 7.  **Package Manager:** Always use `pnpm`, never `npm` or `yarn`.
 8.  **Client Components:** Mark components with `"use client"` if they use hooks, state, or browser APIs.
 9.  **Path Aliases:** Always use `@/*` for app imports, never relative paths like `../../`.
+10. **Domain Convention:** Always use `www.firstradicle.com` (www subdomain) instead of the naked domain `firstradicle.com` in URLs, sitemaps, and any references to the production site.
 
 ---
 
@@ -151,6 +152,7 @@ pnpm format       # Format code with Prettier
 - Images must use `unoptimized: true` (Next.js Image component)
 - No API routes or server-side features
 - All pages must be statically generatable
+- **Domain:** Always use `https://www.firstradicle.com` (with www subdomain) for production URLs, sitemaps, and canonical references
 
 ### Common Patterns
 

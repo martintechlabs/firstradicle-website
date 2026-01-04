@@ -4,6 +4,7 @@ import { Analytics } from "@vercel/analytics/next";
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import ScrollToTop from "@/components/ScrollToTop";
+import { Layout } from "@/components/Layout";
 import "./globals.css";
 
 const fraunces = Fraunces({
@@ -38,7 +39,9 @@ export default function RootLayout({
         <TooltipProvider>
           <Toaster />
           <ScrollToTop />
-          {children}
+          <Layout>
+            {children}
+          </Layout>
         </TooltipProvider>
         <Analytics />
       </body>

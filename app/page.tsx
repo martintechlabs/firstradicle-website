@@ -1,7 +1,6 @@
 "use client";
 
 import { BlogCard, FAQItem, FeatureCard, Headline, OrganicButton, PricingCard, Section, Subheadline } from "@/components/LandingComponents";
-import { Layout } from "@/components/Layout";
 import { ArrowRight, Code, Database, Lock, Rocket, Server, ShieldCheck, Zap } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -9,7 +8,7 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 
 export default function Home() {
   return (
-    <Layout>
+    <>
       {/* Hero Section */}
       <Section className="pt-20 pb-32 relative">
         {/* Background decorative elements */}
@@ -54,7 +53,7 @@ export default function Home() {
                 <div className="text-sm font-sans text-muted-foreground mt-1">Delivery Time</div>
               </div>
               <div>
-                <div className="font-serif font-bold text-3xl text-primary">$10K</div>
+                <div className="font-serif font-bold text-3xl text-primary">$15K</div>
                 <div className="text-sm font-sans text-muted-foreground mt-1">Fixed Price</div>
               </div>
               <div>
@@ -349,7 +348,7 @@ export default function Home() {
           />
           <PricingCard 
             title="The MVP Build"
-            price="$10,000"
+            price="$15,000"
             isPopular={true}
             ctaText="Start Application"
             features={[
@@ -400,7 +399,7 @@ export default function Home() {
             />
             <FAQItem 
               question="Do you use AI to write the code?"
-              answer="Yes. We use advanced AI agents to handle the repetitive boilerplate work. This is how we can deliver a $50k agency-quality build for $10k in 6 weeks. Human senior engineers review every line."
+              answer="Yes. We use advanced AI agents to handle the repetitive boilerplate work. This is how we can deliver a $50k agency-quality build for $15k in 6 weeks. Human senior engineers review every line."
             />
             <FAQItem 
               question="What are the ongoing costs?"
@@ -420,7 +419,7 @@ export default function Home() {
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-6">
           <OrganicButton className="text-xl px-10 py-5 shadow-lg hover:shadow-xl">
-            Apply Now - $10k Fixed
+            Apply Now - $15k Fixed
           </OrganicButton>
           <Link href="/unblock">
             <OrganicButton variant="secondary" className="text-xl px-10 py-5 bg-white hover:bg-white/80">
@@ -432,6 +431,6 @@ export default function Home() {
           Limited to 5 clients per month to ensure quality.
         </p>
       </Section>
-    </Layout>
+    </>
   );
 }
