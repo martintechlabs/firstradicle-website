@@ -29,6 +29,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { CALENDLY_LINKS } from "@/lib/constants";
 
 export default function Home() {
   return (
@@ -280,8 +281,10 @@ export default function Home() {
                   The Handover
                 </h3>
                 <p className="text-lg text-muted-foreground">
-                  Give us your no-code prototype and a walkthrough. We map your
-                  data structures and logic to a real schema.
+                  We review your app's core goals, identify current issues and
+                  pain points, and work with you to determine the exact project
+                  scope for the 6-week sprint. You provide your no-code
+                  prototype and a walkthrough.
                 </p>
               </div>
               <div className="relative pl-12 border-l-2 border-primary/20">
@@ -290,8 +293,12 @@ export default function Home() {
                   The Cultivation
                 </h3>
                 <p className="text-lg text-muted-foreground">
-                  We sprint for 6 weeks. You get weekly demos on a staging
-                  server. We migrate your data and set up auth.
+                  We sprint for 6 weeks, building your production-ready app from
+                  the ground up. You get weekly demos on a staging server to
+                  review progress and provide feedback. We migrate your existing
+                  data, set up authentication and payments, build your core
+                  features, and ensure everything is tested and ready for scale.
+                  Regular check-ins keep you in the loop every step of the way.
                 </p>
               </div>
               <div className="relative pl-12 border-l-2 border-primary/20">
@@ -301,7 +308,7 @@ export default function Home() {
                 </h3>
                 <p className="text-lg text-muted-foreground">
                   We hand over the keys to your GitHub repo. We deploy to your
-                  cloud. You're ready to scale to millions.
+                  cloud. You're ready to scale!
                 </p>
               </div>
             </div>
@@ -502,6 +509,7 @@ export default function Home() {
             price="$249"
             ctaText="Book Session"
             ctaLink="/unblock"
+            ctaExternal={false}
             features={[
               "45-min deep-dive call",
               "Collaborative review of issue",
@@ -514,6 +522,8 @@ export default function Home() {
             price="$15,000"
             isPopular={true}
             ctaText="Start Application"
+            ctaLink={CALENDLY_LINKS.MVP_BUILD_APPLICATION}
+            ctaExternal={true}
             features={[
               "Full Stack Migration",
               "Data Migration",
@@ -527,6 +537,8 @@ export default function Home() {
             title="Scale Support"
             price="$2k/mo"
             ctaText="Contact Us"
+            ctaLink={CALENDLY_LINKS.MVP_BUILD_APPLICATION}
+            ctaExternal={true}
             features={[
               "Ongoing Feature Dev",
 
@@ -547,7 +559,9 @@ export default function Home() {
             <p className="text-lg mb-8 text-muted-foreground">
               Have questions? We have answers.
             </p>
-            <OrganicButton variant="secondary">Contact Support</OrganicButton>
+            <Link href="/contact">
+              <OrganicButton variant="secondary">Contact Support</OrganicButton>
+            </Link>
           </div>
           <div className="md:col-span-8">
             <FAQItem
@@ -556,19 +570,35 @@ export default function Home() {
             />
             <FAQItem
               question="What happens if you miss the 6-week deadline?"
-              answer="We work for free until it's done. If we miss the agreed-upon scope deadline, you don't pay the final installment until it's live."
+              answer="We will immediately stop work and refund your money."
             />
             <FAQItem
-              question="Can you migrate my data from Bubble?"
-              answer="Absolutely. We write custom scripts to export your data from Bubble/Airtable and import it into a properly structured PostgreSQL database."
+              question="Can you migrate my data?"
+              answer="Absolutely. We write custom scripts to export your data from your previous app and import it into a properly structured PostgreSQL database."
             />
             <FAQItem
               question="Do you use AI to write the code?"
-              answer="Yes. We use advanced AI agents to handle the repetitive boilerplate work. This is how we can deliver a $50k agency-quality build for $15k in 6 weeks. Human senior engineers review every line."
+              answer="Yes. We use advanced AI agents to handle the repetitive boilerplate work. This is how we can deliver a $50k agency-quality build for $15k in 6 weeks. Human senior engineers review the code and architecture."
             />
             <FAQItem
               question="What are the ongoing costs?"
-              answer="You only pay for hosting (usually $20-$50/mo on Vercel/Render) and any third-party APIs you use. No more user-limits or row-limits."
+              answer="You only pay for ongoing hosting and any third-party APIs you use. This is very dependent on your application, but most apps start at around $100 a month and scale with your user count."
+            />
+            <FAQItem
+              question="What tech stack do you use?"
+              answer="We use industry-standard, open-source technologies: React or Next.js for the frontend, Node.js or Python for the backend, and PostgreSQL for the database. These are the same technologies used by companies like Uber, Airbnb, and Netflix. You can hire any competent engineer to work on your codebase."
+            />
+            <FAQItem
+              question="What happens after the 6 weeks?"
+              answer="You get 30 days of bug fixes included. After that, you can continue on your own or subscribe to our Scale Support plan ($2k/mo) for ongoing feature development, security updates, and priority support. You're never locked in—you own the code and can take it anywhere."
+            />
+            <FAQItem
+              question="What if my project is more complex than expected?"
+              answer="We scope every project upfront during the application process. If your requirements exceed the standard MVP migration scope, we'll discuss options: either adjust the scope to fit the 6-week timeline, or quote an additional sprint. We're transparent about what's included before you commit."
+            />
+            <FAQItem
+              question="What's the application/onboarding process?"
+              answer="Start by booking an application call through our Calendly link. We'll review your no-code app, discuss your requirements, and confirm scope. If we're a good fit, we'll send a contract and schedule your 6-week sprint. The entire process from application to start typically takes 1-2 weeks."
             />
           </div>
         </div>
@@ -584,11 +614,15 @@ export default function Home() {
           next month's sprint.
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-6">
-          <Link href="/contact">
+          <a
+            href={CALENDLY_LINKS.MVP_BUILD_APPLICATION}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <OrganicButton className="text-xl px-10 py-5 shadow-lg hover:shadow-xl">
               Apply Now - $15k Fixed
             </OrganicButton>
-          </Link>
+          </a>
           <Link href="/unblock">
             <OrganicButton
               variant="secondary"

@@ -13,6 +13,7 @@ import {
   Zap,
 } from "lucide-react";
 import type { Metadata } from "next";
+import { CALENDLY_LINKS } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Unblock Session - First Radicle",
@@ -66,7 +67,7 @@ export default function UnblockPage() {
           </Subheadline>
           <div className="flex flex-col sm:flex-row gap-4">
             <a
-              href="https://calendly.com/martintechlabs/first-radicle-unblock-session"
+              href={CALENDLY_LINKS.UNBLOCK_SESSION}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -241,7 +242,7 @@ export default function UnblockPage() {
               </div>
             </div>
             <a
-              href="https://calendly.com/martintechlabs/first-radicle-unblock-session"
+              href={CALENDLY_LINKS.UNBLOCK_SESSION}
               target="_blank"
               rel="noopener noreferrer"
             >
