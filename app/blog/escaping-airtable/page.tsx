@@ -8,6 +8,30 @@ export const metadata: Metadata = {
   title: "Escaping the Airtable Trap - First Radicle",
   description:
     "How we migrated 50k records from Airtable to PostgreSQL without losing a single record.",
+  openGraph: {
+    title: "Escaping the Airtable Trap - First Radicle",
+    description:
+      "How we migrated 50k records from Airtable to PostgreSQL without losing a single record or breaking relationships.",
+    url: "https://www.firstradicle.com/blog/escaping-airtable",
+    siteName: "First Radicle",
+    images: [
+      {
+        url: "https://www.firstradicle.com/images/blog-airtable.png",
+        width: 1200,
+        height: 630,
+        alt: "Escaping the Airtable Trap: Migrating 50k Records",
+      },
+    ],
+    locale: "en_US",
+    type: "article",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Escaping the Airtable Trap - First Radicle",
+    description:
+      "How we migrated 50k records from Airtable to PostgreSQL without losing a single record.",
+    images: ["https://www.firstradicle.com/images/blog-airtable.png"],
+  },
 };
 
 export default function EscapingAirtable() {

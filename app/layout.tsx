@@ -27,6 +27,30 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.png",
   },
+  openGraph: {
+    title: "First Radicle - Scalable Apps for No-Code Refugees",
+    description:
+      "We turn struggling no-code projects into scalable, production-ready apps in 6 weeks. Guaranteed.",
+    url: "https://www.firstradicle.com",
+    siteName: "First Radicle",
+    images: [
+      {
+        url: "https://www.firstradicle.com/images/hero-growth.png",
+        width: 1200,
+        height: 630,
+        alt: "First Radicle - Scalable Apps for No-Code Refugees",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "First Radicle - Scalable Apps for No-Code Refugees",
+    description:
+      "We turn struggling no-code projects into scalable, production-ready apps in 6 weeks. Guaranteed.",
+    images: ["https://www.firstradicle.com/images/hero-growth.png"],
+  },
 };
 
 export default function RootLayout({

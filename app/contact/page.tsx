@@ -11,6 +11,30 @@ export const metadata: Metadata = {
   title: "Contact - First Radicle",
   description:
     "Get in touch with First Radicle. Book a discovery call or send us an email.",
+  openGraph: {
+    title: "Contact - First Radicle",
+    description:
+      "Get in touch with First Radicle. Book a discovery call or send us an email.",
+    url: "https://www.firstradicle.com/contact",
+    siteName: "First Radicle",
+    images: [
+      {
+        url: "https://www.firstradicle.com/images/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "First Radicle - Contact Us",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact - First Radicle",
+    description:
+      "Get in touch with First Radicle. Book a discovery call or send us an email.",
+    images: ["https://www.firstradicle.com/images/logo.png"],
+  },
 };
 
 export default function Contact() {

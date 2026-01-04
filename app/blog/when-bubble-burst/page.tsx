@@ -8,6 +8,30 @@ export const metadata: Metadata = {
   title: "When the Bubble Burst - First Radicle",
   description:
     "A post-mortem of a Bubble app that crashed at 5k concurrent users, and the Node.js architecture that replaced it.",
+  openGraph: {
+    title: "When the Bubble Burst - First Radicle",
+    description:
+      "A post-mortem of a Bubble app that crashed at 5k concurrent users, and the Node.js architecture that replaced it to handle 100k.",
+    url: "https://www.firstradicle.com/blog/when-bubble-burst",
+    siteName: "First Radicle",
+    images: [
+      {
+        url: "https://www.firstradicle.com/images/blog-bubble.png",
+        width: 1200,
+        height: 630,
+        alt: "When the Bubble Burst - Handling Viral Load",
+      },
+    ],
+    locale: "en_US",
+    type: "article",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "When the Bubble Burst - First Radicle",
+    description:
+      "A post-mortem of a Bubble app that crashed at 5k concurrent users, and the Node.js architecture that replaced it.",
+    images: ["https://www.firstradicle.com/images/blog-bubble.png"],
+  },
 };
 
 export default function WhenBubbleBurst() {

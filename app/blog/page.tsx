@@ -11,6 +11,30 @@ export const metadata: Metadata = {
   title: "Blog - First Radicle",
   description:
     "Technical migration stories and deep dives into engineering challenges.",
+  openGraph: {
+    title: "Blog - First Radicle",
+    description:
+      "Technical migration stories and deep dives into engineering challenges.",
+    url: "https://www.firstradicle.com/blog",
+    siteName: "First Radicle",
+    images: [
+      {
+        url: "https://www.firstradicle.com/images/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "First Radicle Blog",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Blog - First Radicle",
+    description:
+      "Technical migration stories and deep dives into engineering challenges.",
+    images: ["https://www.firstradicle.com/images/logo.png"],
+  },
 };
 
 export default function Blog() {

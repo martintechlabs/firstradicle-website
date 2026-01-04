@@ -11,6 +11,30 @@ export const metadata: Metadata = {
   title: "About - First Radicle",
   description:
     "We are engineers, not agency salesmen. Learn about our philosophy and mission.",
+  openGraph: {
+    title: "About - First Radicle",
+    description:
+      "We are engineers, not agency salesmen. Learn about our philosophy and mission.",
+    url: "https://www.firstradicle.com/about",
+    siteName: "First Radicle",
+    images: [
+      {
+        url: "https://www.firstradicle.com/images/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "First Radicle - About Us",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About - First Radicle",
+    description:
+      "We are engineers, not agency salesmen. Learn about our philosophy and mission.",
+    images: ["https://www.firstradicle.com/images/logo.png"],
+  },
 };
 
 export default function About() {

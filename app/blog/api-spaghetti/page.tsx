@@ -8,6 +8,30 @@ export const metadata: Metadata = {
   title: "The API Spaghetti Incident - First Radicle",
   description:
     "Untangling a web of 40+ Zapier zaps into a clean, type-safe backend service.",
+  openGraph: {
+    title: "The API Spaghetti Incident - First Radicle",
+    description:
+      "Untangling a web of 40+ Zapier zaps into a clean, type-safe backend service. Reducing latency by 400% and costs by 90%.",
+    url: "https://www.firstradicle.com/blog/api-spaghetti",
+    siteName: "First Radicle",
+    images: [
+      {
+        url: "https://www.firstradicle.com/images/blog-zapier.png",
+        width: 1200,
+        height: 630,
+        alt: "The API Spaghetti Incident",
+      },
+    ],
+    locale: "en_US",
+    type: "article",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "The API Spaghetti Incident - First Radicle",
+    description:
+      "Untangling a web of 40+ Zapier zaps into a clean, type-safe backend service.",
+    images: ["https://www.firstradicle.com/images/blog-zapier.png"],
+  },
 };
 
 export default function ApiSpaghetti() {
