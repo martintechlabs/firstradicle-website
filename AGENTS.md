@@ -133,6 +133,150 @@ Always use path aliases for imports:
 - `@/components/Layout` instead of `../../components/Layout`
 - `@/lib/utils` instead of `../lib/utils`
 
+### Analytics Tracking
+
+The codebase uses **Vercel Analytics** for tracking user interactions. All tracking is implemented through helper functions in `app/lib/analytics.ts`.
+
+**Important:** All tracking functions must be called from client components only (components with `"use client"` directive).
+
+#### Available Tracking Functions
+
+All functions are exported from `@/lib/analytics`:
+
+1. **`trackBooking(type, location, metadata?)`** - Track Calendly booking actions
+   - `type`: `"unblock_session"` | `"mvp_application"`
+   - `location`: String describing where the action occurred (e.g., `"hero"`, `"pricing_card"`, `"header"`)
+   - `metadata`: Optional object with additional context (e.g., `{ type: "primary_cta", plan: "mvp_build" }`)
+
+2. **`trackNavClick(destination, location)`** - Track navigation link clicks
+   - `destination`: Where the link goes (e.g., `"unblock"`, `"contact"`, `"about"`)
+   - `location`: `"header"` | `"footer"` | `"mobile_nav"`
+
+3. **`trackCaseStudyClick(slug, location)`** - Track case study card clicks
+   - `slug`: Case study slug (e.g., `"escaping-airtable"`)
+   - `location`: Where the click occurred (e.g., `"homepage"`)
+
+4. **`trackContentEngagement(action, location, metadata?)`** - Track content interactions
+   - `action`: Action type (e.g., `"view_all"`)
+   - `location`: Where the action occurred
+   - `metadata`: Optional additional context
+
+5. **`trackContactClick(type, location, metadata?)`** - Track contact actions
+   - `type`: `"support"` | `"email"`
+   - `location`: Where the action occurred
+   - `metadata`: Optional (e.g., `{ email: "hello@firstradicle.com" }`)
+
+6. **`trackExternalLink(destination, location)`** - Track external link clicks
+   - `destination`: External destination (e.g., `"blog"`)
+   - `location`: Where the link is located
+
+7. **`trackScrollEngagement(action, location)`** - Track smooth scroll actions
+   - `action`: Scroll action (e.g., `"scroll_to_process"`)
+   - `location`: Where the scroll was initiated
+
+8. **`trackMobileNavToggle(state)`** - Track mobile menu open/close
+   - `state`: `"open"` | `"close"`
+
+#### Implementation Pattern
+
+**For Server Components with Metadata:**
+If a page exports metadata and needs tracking, create a separate client component for the interactive parts:
+
+```tsx
+// app/contact/page.tsx (Server Component)
+import { ContactActions } from "./ContactActions";
+
+export const metadata: Metadata = { ... };
+
+export default function Contact() {
+  return (
+    <Section>
+      <ContactActions /> {/* Client component with tracking */}
+    </Section>
+  );
+}
+```
+
+```tsx
+// app/contact/ContactActions.tsx (Client Component)
+"use client";
+
+import { trackBooking } from "@/lib/analytics";
+
+export function ContactActions() {
+  return (
+    <Link
+      href="/unblock"
+      onClick={() => trackBooking("unblock_session", "contact_page", { type: "contact_cta" })}
+    >
+      <OrganicButton>Schedule Call</OrganicButton>
+    </Link>
+  );
+}
+```
+
+**For Client Components:**
+Directly add tracking to onClick handlers:
+
+```tsx
+"use client";
+
+import { trackBooking } from "@/lib/analytics";
+
+export function MyComponent() {
+  return (
+    <a
+      href={CALENDLY_LINKS.UNBLOCK_SESSION}
+      onClick={() => trackBooking("unblock_session", "hero", { type: "primary_cta" })}
+    >
+      <OrganicButton>Book Session</OrganicButton>
+    </a>
+  );
+}
+```
+
+#### What to Track
+
+**High Priority (Always Track):**
+- All Calendly booking links (Unblock Session, MVP Build Application)
+- Primary CTA buttons
+- Navigation links in header/footer
+- Case study card clicks
+
+**Medium Priority:**
+- Content engagement buttons ("View All", etc.)
+- Contact/support actions
+- Email link clicks
+- External links
+
+**Lower Priority:**
+- Mobile menu toggles
+- Scroll engagement actions
+- Secondary navigation actions
+
+#### Event Naming Convention
+
+Events are automatically named by the tracking functions:
+- `book_unblock_session` - From `trackBooking("unblock_session", ...)`
+- `book_mvp_application` - From `trackBooking("mvp_application", ...)`
+- `nav_click` - From `trackNavClick(...)`
+- `case_study_click` - From `trackCaseStudyClick(...)`
+- `content_engagement` - From `trackContentEngagement(...)`
+- `contact_click` - From `trackContactClick("support", ...)`
+- `email_click` - From `trackContactClick("email", ...)`
+- `external_link_click` - From `trackExternalLink(...)`
+- `scroll_engagement` - From `trackScrollEngagement(...)`
+- `mobile_nav_toggle` - From `trackMobileNavToggle(...)`
+
+#### Viewing Analytics
+
+Events appear in the Vercel Dashboard under:
+1. Project → Analytics tab
+2. Web Analytics page
+3. Events panel
+
+Each event shows metadata (location, type, destination, etc.) for filtering and analysis.
+
 ---
 
 ## 7. Build & Development
