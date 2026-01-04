@@ -22,7 +22,8 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
   title: "First Radicle - Scalable Apps for No-Code Refugees",
-  description: "We turn struggling no-code projects into scalable, production-ready apps in 6 weeks. Guaranteed.",
+  description:
+    "We turn struggling no-code projects into scalable, production-ready apps in 6 weeks. Guaranteed.",
   icons: {
     icon: "/favicon.png",
   },
@@ -39,13 +40,10 @@ export default function RootLayout({
         <TooltipProvider>
           <Toaster />
           <ScrollToTop />
-          <Layout>
-            {children}
-          </Layout>
+          <Layout>{children}</Layout>
         </TooltipProvider>
         <Analytics />
       </body>
     </html>
   );
 }
-
